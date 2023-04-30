@@ -5,6 +5,7 @@ Public Class MainForm
 
     Public ConfigPath As String = Application.StartupPath() & "\config.ini"
     Public PingStatus As Boolean = False
+    '
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
