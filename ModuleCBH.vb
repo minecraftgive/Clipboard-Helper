@@ -12,7 +12,7 @@ Module ModuleCBH
 
     Public Function Init()
 
-
+        'MainForm.Hide()
         Dim Params As WebDavClientParams = New WebDavClientParams
         With Params
             .Credentials = New NetworkCredential(WebDAV_User, WebDAV_Password)
@@ -25,7 +25,6 @@ Module ModuleCBH
 
 
     Public Function WebDAVGetRequest(method As String) As HttpWebRequest
-
 
 
     End Function
@@ -41,6 +40,7 @@ Module ModuleCBH
     End Function
 
     Public Function CBH_Ping() As Boolean
+        'MainForm.Hide()
         Try
             Init()
             Dim Result As Boolean = WebDAVObject.Propfind(WebDAV_URL).Result.IsSuccessful
