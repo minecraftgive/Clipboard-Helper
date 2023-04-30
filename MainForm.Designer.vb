@@ -1,0 +1,138 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class MainForm
+    Inherits System.Windows.Forms.Form
+
+    'Form 重写 Dispose，以清理组件列表。
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Windows 窗体设计器所必需的
+    Private components As System.ComponentModel.IContainer
+
+    '注意: 以下过程是 Windows 窗体设计器所必需的
+    '可以使用 Windows 窗体设计器修改它。  
+    '不要使用代码编辑器修改它。
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.Tray = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ActionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrayMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.PingStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ActionsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimerPing = New System.Windows.Forms.Timer(Me.components)
+        Me.TrayMenu.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Tray
+        '
+        Me.Tray.Text = "Clipboard Helper"
+        Me.Tray.Visible = True
+        '
+        'ActionsToolStripMenuItem
+        '
+        Me.ActionsToolStripMenuItem.Name = "ActionsToolStripMenuItem"
+        Me.ActionsToolStripMenuItem.Size = New System.Drawing.Size(62, 21)
+        Me.ActionsToolStripMenuItem.Text = "Actions"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(40, 21)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
+        'TrayMenu
+        '
+        Me.TrayMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PingStatusToolStripMenuItem, Me.ActionsToolStripMenuItem1, Me.ExitToolStripMenuItem1})
+        Me.TrayMenu.Name = "TrayMenu"
+        Me.TrayMenu.Size = New System.Drawing.Size(181, 92)
+        '
+        'PingStatusToolStripMenuItem
+        '
+        Me.PingStatusToolStripMenuItem.Name = "PingStatusToolStripMenuItem"
+        Me.PingStatusToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PingStatusToolStripMenuItem.Text = "_PingStatus_"
+        '
+        'ActionsToolStripMenuItem1
+        '
+        Me.ActionsToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GetToolStripMenuItem, Me.PutToolStripMenuItem, Me.DeleteToolStripMenuItem1})
+        Me.ActionsToolStripMenuItem1.Name = "ActionsToolStripMenuItem1"
+        Me.ActionsToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ActionsToolStripMenuItem1.Text = "Actions"
+        '
+        'GetToolStripMenuItem
+        '
+        Me.GetToolStripMenuItem.Name = "GetToolStripMenuItem"
+        Me.GetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GetToolStripMenuItem.Text = "Get"
+        '
+        'PutToolStripMenuItem
+        '
+        Me.PutToolStripMenuItem.Name = "PutToolStripMenuItem"
+        Me.PutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PutToolStripMenuItem.Text = "Put"
+        '
+        'DeleteToolStripMenuItem1
+        '
+        Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteToolStripMenuItem1.Text = "Delete"
+        '
+        'ExitToolStripMenuItem1
+        '
+        Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem1.Text = "Exit"
+        '
+        'TimerPing
+        '
+        '
+        'MainForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(408, 239)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "MainForm"
+        Me.ShowIcon = False
+        Me.Text = "MainForm"
+        Me.UseWaitCursor = True
+        Me.TrayMenu.ResumeLayout(False)
+        Me.ResumeLayout(False)
+
+    End Sub
+
+    Friend WithEvents Tray As NotifyIcon
+    Friend WithEvents ActionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TrayMenu As ContextMenuStrip
+    Friend WithEvents ActionsToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents GetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents TimerPing As Timer
+    Friend WithEvents PingStatusToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PutToolStripMenuItem As ToolStripMenuItem
+End Class
