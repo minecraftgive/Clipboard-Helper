@@ -69,7 +69,9 @@ Public Class MainForm
             SetTrayStatus("Waiting")
             If Not My.Computer.FileSystem.FileExists(ConfigPath) Then
                 WriteTextToFile(ConfigPath, My.Resources.config_original)
+                'ConfigPath_Label.Text = "" Me.ConfigPath
             End If
+            ConfigPath_Label.Text = ConfigPath
             Dim ConfigParser As FileIniDataParser = New FileIniDataParser
             Dim Config As IniData
 
@@ -88,7 +90,7 @@ Public Class MainForm
                 'Me.Visible = False
                 'Me.Hide()
                 'ExitApp()
-            Else
+                'Else
                 'Me.Hide()
             End If
 
@@ -109,6 +111,8 @@ Public Class MainForm
         End Try
 
         SetTrayStatus("Normal")
+
+        update_RAW_Config_Display()
     End Sub
 
     Private Sub MainForm_VisibleChanged(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -168,6 +172,7 @@ Public Class MainForm
         PingStatusToolStripMenuItem.Text = "Ping: " & IIf(IsSuccessful, "Successful", "Failed")
         SetTrayStatus(IIf(IsSuccessful, "Normal", "Error"))
         PingStatus = IsSuccessful
+        Ping_Show.Text = IsSuccessful
     End Sub
 
     Private Sub PingStatusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PingStatusToolStripMenuItem.Click
@@ -179,6 +184,8 @@ Public Class MainForm
             ShowTrayTip("Successfully connected to server.")
         Else
             ShowTrayTip("Failed to connect to server.")
+            Show_ = True
+            Me.Show()
         End If
 
     End Sub
@@ -264,5 +271,25 @@ Public Class MainForm
         ElseIf Show_ = False Then
             Me.Hide()
         End If
+    End Sub
+
+    Private Sub update_RAW_Config_Display()
+        un_d_l.Text = WebDAV_User
+        pw_d_l.Text = WebDAV_Password
+        S_url_d_l.Text = WebDAV_URL
+        key_d_l.Text = DES_Key + ""
+    End Sub
+
+
+    Private Sub SaveConfig_Botton_Click(sender As Object, e As EventArgs) Handles SaveConfig_Botton.Click
+        FileOpen(2, ConfigPath, OpenMode.Output)
+        PrintLine(2, "[WebDAV]")
+        PrintLine(2, "URL=" + URL_Input.Text)
+        PrintLine(2, "User=" + UserName_Input.Text)
+        PrintLine(2, "Password=" + Password_Input.Text)
+        PrintLine(2, "")
+        PrintLine(2, "[DES]")
+        PrintLine(2, "Key=" + Key_Input.Text)
+        FileClose(2)
     End Sub
 End Class

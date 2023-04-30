@@ -39,6 +39,25 @@ Partial Class MainForm
         Me.Hide_Botton = New System.Windows.Forms.Button()
         Me.Refresh_Botton = New System.Windows.Forms.Button()
         Me.Exit_Botton = New System.Windows.Forms.Button()
+        Me.SaveConfig_Botton = New System.Windows.Forms.Button()
+        Me.Ping_Show = New System.Windows.Forms.Label()
+        Me.UserName_Input = New System.Windows.Forms.TextBox()
+        Me.Password_Input = New System.Windows.Forms.TextBox()
+        Me.URL_Input = New System.Windows.Forms.TextBox()
+        Me.UserName = New System.Windows.Forms.Label()
+        Me.Password = New System.Windows.Forms.Label()
+        Me.ServerURL = New System.Windows.Forms.Label()
+        Me.ConfigPath_Label = New System.Windows.Forms.Label()
+        Me.Key_Input = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.key_d = New System.Windows.Forms.Label()
+        Me.key_d_l = New System.Windows.Forms.TextBox()
+        Me.s_url_d = New System.Windows.Forms.Label()
+        Me.pw_d = New System.Windows.Forms.Label()
+        Me.un_d = New System.Windows.Forms.Label()
+        Me.S_url_d_l = New System.Windows.Forms.TextBox()
+        Me.pw_d_l = New System.Windows.Forms.TextBox()
+        Me.un_d_l = New System.Windows.Forms.TextBox()
         Me.TrayMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -119,7 +138,7 @@ Partial Class MainForm
         '
         'Hide_Botton
         '
-        Me.Hide_Botton.Location = New System.Drawing.Point(14, 32)
+        Me.Hide_Botton.Location = New System.Drawing.Point(13, 13)
         Me.Hide_Botton.Margin = New System.Windows.Forms.Padding(4)
         Me.Hide_Botton.Name = "Hide_Botton"
         Me.Hide_Botton.Size = New System.Drawing.Size(145, 61)
@@ -129,29 +148,203 @@ Partial Class MainForm
         '
         'Refresh_Botton
         '
-        Me.Refresh_Botton.Location = New System.Drawing.Point(225, 36)
+        Me.Refresh_Botton.Location = New System.Drawing.Point(166, 13)
         Me.Refresh_Botton.Margin = New System.Windows.Forms.Padding(4)
         Me.Refresh_Botton.Name = "Refresh_Botton"
-        Me.Refresh_Botton.Size = New System.Drawing.Size(111, 56)
+        Me.Refresh_Botton.Size = New System.Drawing.Size(111, 61)
         Me.Refresh_Botton.TabIndex = 1
         Me.Refresh_Botton.Text = "Refresh"
         Me.Refresh_Botton.UseVisualStyleBackColor = True
         '
         'Exit_Botton
         '
-        Me.Exit_Botton.Location = New System.Drawing.Point(72, 149)
+        Me.Exit_Botton.Location = New System.Drawing.Point(12, 81)
         Me.Exit_Botton.Name = "Exit_Botton"
-        Me.Exit_Botton.Size = New System.Drawing.Size(192, 68)
+        Me.Exit_Botton.Size = New System.Drawing.Size(265, 61)
         Me.Exit_Botton.TabIndex = 2
         Me.Exit_Botton.Text = "Exit"
         Me.Exit_Botton.UseVisualStyleBackColor = True
+        '
+        'SaveConfig_Botton
+        '
+        Me.SaveConfig_Botton.Location = New System.Drawing.Point(13, 159)
+        Me.SaveConfig_Botton.Name = "SaveConfig_Botton"
+        Me.SaveConfig_Botton.Size = New System.Drawing.Size(149, 61)
+        Me.SaveConfig_Botton.TabIndex = 3
+        Me.SaveConfig_Botton.Text = "Save"
+        Me.SaveConfig_Botton.UseVisualStyleBackColor = True
+        '
+        'Ping_Show
+        '
+        Me.Ping_Show.AutoSize = True
+        Me.Ping_Show.Location = New System.Drawing.Point(168, 159)
+        Me.Ping_Show.Name = "Ping_Show"
+        Me.Ping_Show.Size = New System.Drawing.Size(56, 16)
+        Me.Ping_Show.TabIndex = 4
+        Me.Ping_Show.Text = "Unknown"
+        '
+        'UserName_Input
+        '
+        Me.UserName_Input.Location = New System.Drawing.Point(401, 13)
+        Me.UserName_Input.Name = "UserName_Input"
+        Me.UserName_Input.Size = New System.Drawing.Size(368, 23)
+        Me.UserName_Input.TabIndex = 5
+        '
+        'Password_Input
+        '
+        Me.Password_Input.Location = New System.Drawing.Point(401, 57)
+        Me.Password_Input.Name = "Password_Input"
+        Me.Password_Input.Size = New System.Drawing.Size(368, 23)
+        Me.Password_Input.TabIndex = 6
+        '
+        'URL_Input
+        '
+        Me.URL_Input.Location = New System.Drawing.Point(401, 109)
+        Me.URL_Input.Name = "URL_Input"
+        Me.URL_Input.Size = New System.Drawing.Size(368, 23)
+        Me.URL_Input.TabIndex = 7
+        '
+        'UserName
+        '
+        Me.UserName.AutoSize = True
+        Me.UserName.Location = New System.Drawing.Point(327, 16)
+        Me.UserName.Name = "UserName"
+        Me.UserName.Size = New System.Drawing.Size(63, 16)
+        Me.UserName.TabIndex = 8
+        Me.UserName.Text = "UserName"
+        '
+        'Password
+        '
+        Me.Password.AutoSize = True
+        Me.Password.Location = New System.Drawing.Point(327, 64)
+        Me.Password.Name = "Password"
+        Me.Password.Size = New System.Drawing.Size(63, 16)
+        Me.Password.TabIndex = 9
+        Me.Password.Text = "Password"
+        '
+        'ServerURL
+        '
+        Me.ServerURL.AutoSize = True
+        Me.ServerURL.Location = New System.Drawing.Point(320, 116)
+        Me.ServerURL.Name = "ServerURL"
+        Me.ServerURL.Size = New System.Drawing.Size(70, 16)
+        Me.ServerURL.TabIndex = 10
+        Me.ServerURL.Text = "ServerURL"
+        '
+        'ConfigPath_Label
+        '
+        Me.ConfigPath_Label.AutoSize = True
+        Me.ConfigPath_Label.Location = New System.Drawing.Point(116, 416)
+        Me.ConfigPath_Label.Name = "ConfigPath_Label"
+        Me.ConfigPath_Label.Size = New System.Drawing.Size(56, 16)
+        Me.ConfigPath_Label.TabIndex = 11
+        Me.ConfigPath_Label.Text = "Unknown"
+        '
+        'Key_Input
+        '
+        Me.Key_Input.AutoSize = True
+        Me.Key_Input.Location = New System.Drawing.Point(362, 159)
+        Me.Key_Input.Name = "Key_Input"
+        Me.Key_Input.Size = New System.Drawing.Size(28, 16)
+        Me.Key_Input.TabIndex = 14
+        Me.Key_Input.Text = "Key"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(401, 152)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(368, 23)
+        Me.TextBox1.TabIndex = 13
+        '
+        'key_d
+        '
+        Me.key_d.AutoSize = True
+        Me.key_d.Location = New System.Drawing.Point(215, 384)
+        Me.key_d.Name = "key_d"
+        Me.key_d.Size = New System.Drawing.Size(28, 16)
+        Me.key_d.TabIndex = 22
+        Me.key_d.Text = "key"
+        '
+        'key_d_l
+        '
+        Me.key_d_l.Location = New System.Drawing.Point(254, 377)
+        Me.key_d_l.Name = "key_d_l"
+        Me.key_d_l.Size = New System.Drawing.Size(368, 23)
+        Me.key_d_l.TabIndex = 21
+        '
+        's_url_d
+        '
+        Me.s_url_d.AutoSize = True
+        Me.s_url_d.Location = New System.Drawing.Point(173, 341)
+        Me.s_url_d.Name = "s_url_d"
+        Me.s_url_d.Size = New System.Drawing.Size(42, 16)
+        Me.s_url_d.TabIndex = 20
+        Me.s_url_d.Text = "s_url"
+        '
+        'pw_d
+        '
+        Me.pw_d.AutoSize = True
+        Me.pw_d.Location = New System.Drawing.Point(180, 289)
+        Me.pw_d.Name = "pw_d"
+        Me.pw_d.Size = New System.Drawing.Size(21, 16)
+        Me.pw_d.TabIndex = 19
+        Me.pw_d.Text = "pw"
+        '
+        'un_d
+        '
+        Me.un_d.AutoSize = True
+        Me.un_d.Location = New System.Drawing.Point(180, 241)
+        Me.un_d.Name = "un_d"
+        Me.un_d.Size = New System.Drawing.Size(21, 16)
+        Me.un_d.TabIndex = 18
+        Me.un_d.Text = "un"
+        '
+        'S_url_d_l
+        '
+        Me.S_url_d_l.Location = New System.Drawing.Point(254, 334)
+        Me.S_url_d_l.Name = "S_url_d_l"
+        Me.S_url_d_l.Size = New System.Drawing.Size(368, 23)
+        Me.S_url_d_l.TabIndex = 17
+        '
+        'pw_d_l
+        '
+        Me.pw_d_l.Location = New System.Drawing.Point(254, 282)
+        Me.pw_d_l.Name = "pw_d_l"
+        Me.pw_d_l.Size = New System.Drawing.Size(368, 23)
+        Me.pw_d_l.TabIndex = 16
+        '
+        'un_d_l
+        '
+        Me.un_d_l.Location = New System.Drawing.Point(254, 238)
+        Me.un_d_l.Name = "un_d_l"
+        Me.un_d_l.Size = New System.Drawing.Size(368, 23)
+        Me.un_d_l.TabIndex = 15
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(468, 244)
+        Me.ClientSize = New System.Drawing.Size(781, 441)
         Me.ControlBox = False
+        Me.Controls.Add(Me.key_d)
+        Me.Controls.Add(Me.key_d_l)
+        Me.Controls.Add(Me.s_url_d)
+        Me.Controls.Add(Me.pw_d)
+        Me.Controls.Add(Me.un_d)
+        Me.Controls.Add(Me.S_url_d_l)
+        Me.Controls.Add(Me.pw_d_l)
+        Me.Controls.Add(Me.un_d_l)
+        Me.Controls.Add(Me.Key_Input)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ConfigPath_Label)
+        Me.Controls.Add(Me.ServerURL)
+        Me.Controls.Add(Me.Password)
+        Me.Controls.Add(Me.UserName)
+        Me.Controls.Add(Me.URL_Input)
+        Me.Controls.Add(Me.Password_Input)
+        Me.Controls.Add(Me.UserName_Input)
+        Me.Controls.Add(Me.Ping_Show)
+        Me.Controls.Add(Me.SaveConfig_Botton)
         Me.Controls.Add(Me.Exit_Botton)
         Me.Controls.Add(Me.Refresh_Botton)
         Me.Controls.Add(Me.Hide_Botton)
@@ -165,6 +358,7 @@ Partial Class MainForm
         Me.Text = "CilpBoardHelper_GUI"
         Me.TrayMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -184,4 +378,23 @@ Partial Class MainForm
     Friend WithEvents Hide_Botton As Button
     Friend WithEvents Refresh_Botton As Button
     Friend WithEvents Exit_Botton As Button
+    Friend WithEvents SaveConfig_Botton As Button
+    Friend WithEvents Ping_Show As Label
+    Friend WithEvents UserName_Input As TextBox
+    Friend WithEvents Password_Input As TextBox
+    Friend WithEvents URL_Input As TextBox
+    Friend WithEvents UserName As Label
+    Friend WithEvents Password As Label
+    Friend WithEvents ServerURL As Label
+    Friend WithEvents ConfigPath_Label As Label
+    Friend WithEvents Key_Input As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents key_d As Label
+    Friend WithEvents key_d_l As TextBox
+    Friend WithEvents s_url_d As Label
+    Friend WithEvents pw_d As Label
+    Friend WithEvents un_d As Label
+    Friend WithEvents S_url_d_l As TextBox
+    Friend WithEvents pw_d_l As TextBox
+    Friend WithEvents un_d_l As TextBox
 End Class
