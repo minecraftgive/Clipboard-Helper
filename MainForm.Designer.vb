@@ -33,8 +33,12 @@ Partial Class MainForm
         Me.GetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GUIConfigToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerPing = New System.Windows.Forms.Timer(Me.components)
+        Me.Hide_Botton = New System.Windows.Forms.Button()
+        Me.Refresh_Botton = New System.Windows.Forms.Button()
+        Me.Exit_Botton = New System.Windows.Forms.Button()
         Me.TrayMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,61 +67,102 @@ Partial Class MainForm
         '
         'TrayMenu
         '
-        Me.TrayMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PingStatusToolStripMenuItem, Me.ActionsToolStripMenuItem1, Me.ExitToolStripMenuItem1})
+        Me.TrayMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PingStatusToolStripMenuItem, Me.ActionsToolStripMenuItem1, Me.GUIConfigToolStripMenuItem, Me.ExitToolStripMenuItem1})
         Me.TrayMenu.Name = "TrayMenu"
-        Me.TrayMenu.Size = New System.Drawing.Size(181, 92)
+        Me.TrayMenu.Size = New System.Drawing.Size(218, 92)
         '
         'PingStatusToolStripMenuItem
         '
         Me.PingStatusToolStripMenuItem.Name = "PingStatusToolStripMenuItem"
-        Me.PingStatusToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PingStatusToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
         Me.PingStatusToolStripMenuItem.Text = "_PingStatus_"
         '
         'ActionsToolStripMenuItem1
         '
         Me.ActionsToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GetToolStripMenuItem, Me.PutToolStripMenuItem, Me.DeleteToolStripMenuItem1})
         Me.ActionsToolStripMenuItem1.Name = "ActionsToolStripMenuItem1"
-        Me.ActionsToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ActionsToolStripMenuItem1.Size = New System.Drawing.Size(217, 22)
         Me.ActionsToolStripMenuItem1.Text = "Actions"
         '
         'GetToolStripMenuItem
         '
         Me.GetToolStripMenuItem.Name = "GetToolStripMenuItem"
-        Me.GetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GetToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.GetToolStripMenuItem.Text = "Get"
         '
         'PutToolStripMenuItem
         '
         Me.PutToolStripMenuItem.Name = "PutToolStripMenuItem"
-        Me.PutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PutToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.PutToolStripMenuItem.Text = "Put"
         '
         'DeleteToolStripMenuItem1
         '
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
-        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(113, 22)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
+        '
+        'GUIConfigToolStripMenuItem
+        '
+        Me.GUIConfigToolStripMenuItem.Name = "GUIConfigToolStripMenuItem"
+        Me.GUIConfigToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.GUIConfigToolStripMenuItem.Text = "GUI (Config and logger)"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(217, 22)
         Me.ExitToolStripMenuItem1.Text = "Exit"
         '
         'TimerPing
         '
         '
+        'Hide_Botton
+        '
+        Me.Hide_Botton.Location = New System.Drawing.Point(14, 32)
+        Me.Hide_Botton.Margin = New System.Windows.Forms.Padding(4)
+        Me.Hide_Botton.Name = "Hide_Botton"
+        Me.Hide_Botton.Size = New System.Drawing.Size(145, 61)
+        Me.Hide_Botton.TabIndex = 0
+        Me.Hide_Botton.Text = "Hide"
+        Me.Hide_Botton.UseVisualStyleBackColor = True
+        '
+        'Refresh_Botton
+        '
+        Me.Refresh_Botton.Location = New System.Drawing.Point(225, 36)
+        Me.Refresh_Botton.Margin = New System.Windows.Forms.Padding(4)
+        Me.Refresh_Botton.Name = "Refresh_Botton"
+        Me.Refresh_Botton.Size = New System.Drawing.Size(111, 56)
+        Me.Refresh_Botton.TabIndex = 1
+        Me.Refresh_Botton.Text = "Refresh"
+        Me.Refresh_Botton.UseVisualStyleBackColor = True
+        '
+        'Exit_Botton
+        '
+        Me.Exit_Botton.Location = New System.Drawing.Point(72, 149)
+        Me.Exit_Botton.Name = "Exit_Botton"
+        Me.Exit_Botton.Size = New System.Drawing.Size(192, 68)
+        Me.Exit_Botton.TabIndex = 2
+        Me.Exit_Botton.Text = "Exit"
+        Me.Exit_Botton.UseVisualStyleBackColor = True
+        '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(408, 239)
+        Me.ClientSize = New System.Drawing.Size(468, 244)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Exit_Botton)
+        Me.Controls.Add(Me.Refresh_Botton)
+        Me.Controls.Add(Me.Hide_Botton)
+        Me.Font = New System.Drawing.Font("JetBrains Mono", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MainForm"
         Me.ShowIcon = False
-        Me.Text = "MainForm"
-        Me.UseWaitCursor = True
+        Me.Text = "CilpBoardHelper_GUI"
         Me.TrayMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -135,4 +180,8 @@ Partial Class MainForm
     Friend WithEvents TimerPing As Timer
     Friend WithEvents PingStatusToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GUIConfigToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Hide_Botton As Button
+    Friend WithEvents Refresh_Botton As Button
+    Friend WithEvents Exit_Botton As Button
 End Class
