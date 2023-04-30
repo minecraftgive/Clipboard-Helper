@@ -5,9 +5,64 @@ Public Class MainForm
 
     Public ConfigPath As String = Application.StartupPath() & "\config.ini"
     Public PingStatus As Boolean = False
+    Public Show_ As Boolean = False
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'HideMainForm()
+        'Me.Visible = False
+        'Try
+        '    Tray.ContextMenuStrip = TrayMenu
+        '    Tray.Visible = True
+        '    SetTrayStatus("Waiting")
+        '    If Not My.Computer.FileSystem.FileExists(ConfigPath) Then
+        '        WriteTextToFile(ConfigPath, My.Resources.config_original)
+        '    End If
+        '    Dim ConfigParser As FileIniDataParser = New FileIniDataParser
+        '    Dim Config As IniData
 
+        '    Config = ConfigParser.ReadFile(ConfigPath)
+
+        '    ModuleCBH.WebDAV_URL = Config.GetKey("WebDAV.URL")
+        '    ModuleCBH.WebDAV_User = Config.GetKey("WebDAV.User")
+        '    ModuleCBH.WebDAV_Password = Config.GetKey("WebDAV.Password")
+        '    ModuleCBH.DES_Key = Config.GetKey("DES.Key")
+
+        '    If isEmpty(ModuleCBH.WebDAV_URL) Or isEmpty(ModuleCBH.WebDAV_User) Or isEmpty(ModuleCBH.WebDAV_Password) Or isEmpty(ModuleCBH.DES_Key) Then
+        '        SetTrayStatus("Error")
+        '        MsgBox("Error: config.ini is not configured properly. Exiting...")
+
+        '        'ExitApp()
+        '    End If
+
+        '    ' Test WebDAV
+
+        '    '    Try
+        '    '    Dim Result As String = CBH_Get()
+        '    '    'MsgBox(Result)
+        '    'Catch ex As Exception
+        '    '    ShowTrayTip("Error while testing WebDAV: " & ex.Message)
+        '    'End Try
+        '    PingStatusToolStripMenuItem_Click(Nothing, Nothing)
+
+        'Catch ex As Exception
+        '    SetTrayStatus("Fatel Error!!!")
+        '    MsgBox("Error: " & ex.Message)
+        '    ExitApp()
+        'End Try
+
+        'SetTrayStatus("Normal")
+        'MainForm_Shown()
+        'Me.Visible = True
+        'Me.Show()
+        Me.Hide()
+        Main_Function()
+
+
+
+    End Sub
+
+    Public Sub Main_Function()
+        'Me.Show()
         Try
             Tray.ContextMenuStrip = TrayMenu
             Tray.Visible = True
@@ -27,8 +82,14 @@ Public Class MainForm
 
             If isEmpty(ModuleCBH.WebDAV_URL) Or isEmpty(ModuleCBH.WebDAV_User) Or isEmpty(ModuleCBH.WebDAV_Password) Or isEmpty(ModuleCBH.DES_Key) Then
                 SetTrayStatus("Error")
-                MsgBox("Error: config.ini is not configured properly. Exiting...")
-                ExitApp()
+                MsgBox("Error: config.ini is not configured properly.")
+                Show_ = True
+                Me.Show()
+                'Me.Visible = False
+                'Me.Hide()
+                'ExitApp()
+            Else
+                'Me.Hide()
             End If
 
             ' Test WebDAV
@@ -42,19 +103,20 @@ Public Class MainForm
             PingStatusToolStripMenuItem_Click(Nothing, Nothing)
 
         Catch ex As Exception
-            SetTrayStatus("Error")
+            SetTrayStatus("Fatel Error!!!")
             MsgBox("Error: " & ex.Message)
             ExitApp()
         End Try
 
         SetTrayStatus("Normal")
-
-
-
     End Sub
 
-    Private Sub MainForm_VisibleChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.VisibleChanged
-        HideMainForm()
+    Private Sub MainForm_VisibleChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+        If Show_ = True Then
+            Me.Show()
+        ElseIf Show_ = False Then
+            Me.Hide()
+        End If
 
     End Sub
 
@@ -175,5 +237,32 @@ Public Class MainForm
             ShowTrayTip("Error occured when deleting clipboard content.: " & ex.Message)
         End Try
         SetTrayStatus("Normal")
+    End Sub
+
+    Private Sub GUIConfigToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GUIConfigToolStripMenuItem.Click
+        Show_ = True
+        Me.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Hide_Botton.Click
+        Show_ = False
+        Me.Hide()
+    End Sub
+
+    Private Sub Exit_Botton_Click(sender As Object, e As EventArgs) Handles Exit_Botton.Click
+        ExitApp()
+    End Sub
+
+    Private Sub Refresh_Botton_Click(sender As Object, e As EventArgs) Handles Refresh_Botton.Click
+        Main_Function()
+    End Sub
+
+    Private Sub MainForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        'Me.Hide()
+        If Show_ = True Then
+            Me.Show()
+        ElseIf Show_ = False Then
+            Me.Hide()
+        End If
     End Sub
 End Class
