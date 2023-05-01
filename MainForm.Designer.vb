@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainForm
     '注意: 以下过程是 Windows 窗体设计器所必需的
     '可以使用 Windows 窗体设计器修改它。  
     '不要使用代码编辑器修改它。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Tray = New System.Windows.Forms.NotifyIcon(Me.components)
@@ -43,21 +43,14 @@ Partial Class MainForm
         Me.Ping_Show = New System.Windows.Forms.Label()
         Me.UserName_Input = New System.Windows.Forms.TextBox()
         Me.Password_Input = New System.Windows.Forms.TextBox()
-        Me.URL_Input = New System.Windows.Forms.TextBox()
+        Me.ServerURL_Input = New System.Windows.Forms.TextBox()
         Me.UserName = New System.Windows.Forms.Label()
         Me.Password = New System.Windows.Forms.Label()
         Me.ServerURL = New System.Windows.Forms.Label()
-        Me.ConfigPath_Label = New System.Windows.Forms.Label()
-        Me.Key_Input = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.key_d = New System.Windows.Forms.Label()
-        Me.key_d_l = New System.Windows.Forms.TextBox()
-        Me.s_url_d = New System.Windows.Forms.Label()
-        Me.pw_d = New System.Windows.Forms.Label()
-        Me.un_d = New System.Windows.Forms.Label()
-        Me.S_url_d_l = New System.Windows.Forms.TextBox()
-        Me.pw_d_l = New System.Windows.Forms.TextBox()
-        Me.un_d_l = New System.Windows.Forms.TextBox()
+        Me.Key = New System.Windows.Forms.Label()
+        Me.Key_Input = New System.Windows.Forms.TextBox()
+        Me.Delevelop_Form_Show = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TrayMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -197,12 +190,12 @@ Partial Class MainForm
         Me.Password_Input.Size = New System.Drawing.Size(368, 23)
         Me.Password_Input.TabIndex = 6
         '
-        'URL_Input
+        'ServerURL_Input
         '
-        Me.URL_Input.Location = New System.Drawing.Point(401, 109)
-        Me.URL_Input.Name = "URL_Input"
-        Me.URL_Input.Size = New System.Drawing.Size(368, 23)
-        Me.URL_Input.TabIndex = 7
+        Me.ServerURL_Input.Location = New System.Drawing.Point(401, 108)
+        Me.ServerURL_Input.Name = "ServerURL_Input"
+        Me.ServerURL_Input.Size = New System.Drawing.Size(368, 23)
+        Me.ServerURL_Input.TabIndex = 7
         '
         'UserName
         '
@@ -231,116 +224,55 @@ Partial Class MainForm
         Me.ServerURL.TabIndex = 10
         Me.ServerURL.Text = "ServerURL"
         '
-        'ConfigPath_Label
+        'Key
         '
-        Me.ConfigPath_Label.AutoSize = True
-        Me.ConfigPath_Label.Location = New System.Drawing.Point(116, 416)
-        Me.ConfigPath_Label.Name = "ConfigPath_Label"
-        Me.ConfigPath_Label.Size = New System.Drawing.Size(56, 16)
-        Me.ConfigPath_Label.TabIndex = 11
-        Me.ConfigPath_Label.Text = "Unknown"
+        Me.Key.AutoSize = True
+        Me.Key.Location = New System.Drawing.Point(362, 159)
+        Me.Key.Name = "Key"
+        Me.Key.Size = New System.Drawing.Size(28, 16)
+        Me.Key.TabIndex = 14
+        Me.Key.Text = "Key"
         '
         'Key_Input
         '
-        Me.Key_Input.AutoSize = True
-        Me.Key_Input.Location = New System.Drawing.Point(362, 159)
+        Me.Key_Input.Location = New System.Drawing.Point(401, 152)
         Me.Key_Input.Name = "Key_Input"
-        Me.Key_Input.Size = New System.Drawing.Size(28, 16)
-        Me.Key_Input.TabIndex = 14
-        Me.Key_Input.Text = "Key"
+        Me.Key_Input.Size = New System.Drawing.Size(368, 23)
+        Me.Key_Input.TabIndex = 13
+        Me.Key_Input.WordWrap = False
         '
-        'TextBox1
+        'Delevelop_Form_Show
         '
-        Me.TextBox1.Location = New System.Drawing.Point(401, 152)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(368, 23)
-        Me.TextBox1.TabIndex = 13
+        Me.Delevelop_Form_Show.Location = New System.Drawing.Point(572, 243)
+        Me.Delevelop_Form_Show.Name = "Delevelop_Form_Show"
+        Me.Delevelop_Form_Show.Size = New System.Drawing.Size(142, 54)
+        Me.Delevelop_Form_Show.TabIndex = 23
+        Me.Delevelop_Form_Show.Text = "Developer"
+        Me.Delevelop_Form_Show.UseVisualStyleBackColor = True
         '
-        'key_d
+        'Button1
         '
-        Me.key_d.AutoSize = True
-        Me.key_d.Location = New System.Drawing.Point(215, 384)
-        Me.key_d.Name = "key_d"
-        Me.key_d.Size = New System.Drawing.Size(28, 16)
-        Me.key_d.TabIndex = 22
-        Me.key_d.Text = "key"
-        '
-        'key_d_l
-        '
-        Me.key_d_l.Location = New System.Drawing.Point(254, 377)
-        Me.key_d_l.Name = "key_d_l"
-        Me.key_d_l.Size = New System.Drawing.Size(368, 23)
-        Me.key_d_l.TabIndex = 21
-        '
-        's_url_d
-        '
-        Me.s_url_d.AutoSize = True
-        Me.s_url_d.Location = New System.Drawing.Point(173, 341)
-        Me.s_url_d.Name = "s_url_d"
-        Me.s_url_d.Size = New System.Drawing.Size(42, 16)
-        Me.s_url_d.TabIndex = 20
-        Me.s_url_d.Text = "s_url"
-        '
-        'pw_d
-        '
-        Me.pw_d.AutoSize = True
-        Me.pw_d.Location = New System.Drawing.Point(180, 289)
-        Me.pw_d.Name = "pw_d"
-        Me.pw_d.Size = New System.Drawing.Size(21, 16)
-        Me.pw_d.TabIndex = 19
-        Me.pw_d.Text = "pw"
-        '
-        'un_d
-        '
-        Me.un_d.AutoSize = True
-        Me.un_d.Location = New System.Drawing.Point(180, 241)
-        Me.un_d.Name = "un_d"
-        Me.un_d.Size = New System.Drawing.Size(21, 16)
-        Me.un_d.TabIndex = 18
-        Me.un_d.Text = "un"
-        '
-        'S_url_d_l
-        '
-        Me.S_url_d_l.Location = New System.Drawing.Point(254, 334)
-        Me.S_url_d_l.Name = "S_url_d_l"
-        Me.S_url_d_l.Size = New System.Drawing.Size(368, 23)
-        Me.S_url_d_l.TabIndex = 17
-        '
-        'pw_d_l
-        '
-        Me.pw_d_l.Location = New System.Drawing.Point(254, 282)
-        Me.pw_d_l.Name = "pw_d_l"
-        Me.pw_d_l.Size = New System.Drawing.Size(368, 23)
-        Me.pw_d_l.TabIndex = 16
-        '
-        'un_d_l
-        '
-        Me.un_d_l.Location = New System.Drawing.Point(254, 238)
-        Me.un_d_l.Name = "un_d_l"
-        Me.un_d_l.Size = New System.Drawing.Size(368, 23)
-        Me.un_d_l.TabIndex = 15
+        Me.Button1.Location = New System.Drawing.Point(369, 254)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(781, 441)
+        Me.ClientSize = New System.Drawing.Size(769, 429)
         Me.ControlBox = False
-        Me.Controls.Add(Me.key_d)
-        Me.Controls.Add(Me.key_d_l)
-        Me.Controls.Add(Me.s_url_d)
-        Me.Controls.Add(Me.pw_d)
-        Me.Controls.Add(Me.un_d)
-        Me.Controls.Add(Me.S_url_d_l)
-        Me.Controls.Add(Me.pw_d_l)
-        Me.Controls.Add(Me.un_d_l)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Delevelop_Form_Show)
+        Me.Controls.Add(Me.Key)
         Me.Controls.Add(Me.Key_Input)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ConfigPath_Label)
         Me.Controls.Add(Me.ServerURL)
         Me.Controls.Add(Me.Password)
         Me.Controls.Add(Me.UserName)
-        Me.Controls.Add(Me.URL_Input)
+        Me.Controls.Add(Me.ServerURL_Input)
         Me.Controls.Add(Me.Password_Input)
         Me.Controls.Add(Me.UserName_Input)
         Me.Controls.Add(Me.Ping_Show)
@@ -382,19 +314,12 @@ Partial Class MainForm
     Friend WithEvents Ping_Show As Label
     Friend WithEvents UserName_Input As TextBox
     Friend WithEvents Password_Input As TextBox
-    Friend WithEvents URL_Input As TextBox
+    Friend WithEvents ServerURL_Input As TextBox
     Friend WithEvents UserName As Label
     Friend WithEvents Password As Label
     Friend WithEvents ServerURL As Label
-    Friend WithEvents ConfigPath_Label As Label
-    Friend WithEvents Key_Input As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents key_d As Label
-    Friend WithEvents key_d_l As TextBox
-    Friend WithEvents s_url_d As Label
-    Friend WithEvents pw_d As Label
-    Friend WithEvents un_d As Label
-    Friend WithEvents S_url_d_l As TextBox
-    Friend WithEvents pw_d_l As TextBox
-    Friend WithEvents un_d_l As TextBox
+    Friend WithEvents Key As Label
+    Friend WithEvents Key_Input As TextBox
+    Friend WithEvents Delevelop_Form_Show As Button
+    Friend WithEvents Button1 As Button
 End Class
