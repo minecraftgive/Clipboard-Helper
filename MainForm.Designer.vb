@@ -134,17 +134,17 @@ Partial Class MainForm
         Me.Hide_Botton.Location = New System.Drawing.Point(13, 13)
         Me.Hide_Botton.Margin = New System.Windows.Forms.Padding(4)
         Me.Hide_Botton.Name = "Hide_Botton"
-        Me.Hide_Botton.Size = New System.Drawing.Size(145, 61)
+        Me.Hide_Botton.Size = New System.Drawing.Size(93, 61)
         Me.Hide_Botton.TabIndex = 0
         Me.Hide_Botton.Text = "Hide"
         Me.Hide_Botton.UseVisualStyleBackColor = True
         '
         'Refresh_Botton
         '
-        Me.Refresh_Botton.Location = New System.Drawing.Point(166, 13)
+        Me.Refresh_Botton.Location = New System.Drawing.Point(114, 13)
         Me.Refresh_Botton.Margin = New System.Windows.Forms.Padding(4)
         Me.Refresh_Botton.Name = "Refresh_Botton"
-        Me.Refresh_Botton.Size = New System.Drawing.Size(111, 61)
+        Me.Refresh_Botton.Size = New System.Drawing.Size(85, 61)
         Me.Refresh_Botton.TabIndex = 1
         Me.Refresh_Botton.Text = "Refresh"
         Me.Refresh_Botton.UseVisualStyleBackColor = True
@@ -153,7 +153,7 @@ Partial Class MainForm
         '
         Me.Exit_Botton.Location = New System.Drawing.Point(12, 81)
         Me.Exit_Botton.Name = "Exit_Botton"
-        Me.Exit_Botton.Size = New System.Drawing.Size(265, 61)
+        Me.Exit_Botton.Size = New System.Drawing.Size(187, 61)
         Me.Exit_Botton.TabIndex = 2
         Me.Exit_Botton.Text = "Exit"
         Me.Exit_Botton.UseVisualStyleBackColor = True
@@ -162,7 +162,7 @@ Partial Class MainForm
         '
         Me.SaveConfig_Botton.Location = New System.Drawing.Point(13, 159)
         Me.SaveConfig_Botton.Name = "SaveConfig_Botton"
-        Me.SaveConfig_Botton.Size = New System.Drawing.Size(149, 61)
+        Me.SaveConfig_Botton.Size = New System.Drawing.Size(106, 61)
         Me.SaveConfig_Botton.TabIndex = 3
         Me.SaveConfig_Botton.Text = "Save"
         Me.SaveConfig_Botton.UseVisualStyleBackColor = True
@@ -170,7 +170,7 @@ Partial Class MainForm
         'Ping_Show
         '
         Me.Ping_Show.AutoSize = True
-        Me.Ping_Show.Location = New System.Drawing.Point(168, 159)
+        Me.Ping_Show.Location = New System.Drawing.Point(125, 159)
         Me.Ping_Show.Name = "Ping_Show"
         Me.Ping_Show.Size = New System.Drawing.Size(56, 16)
         Me.Ping_Show.TabIndex = 4
@@ -178,21 +178,21 @@ Partial Class MainForm
         '
         'UserName_Input
         '
-        Me.UserName_Input.Location = New System.Drawing.Point(401, 13)
+        Me.UserName_Input.Location = New System.Drawing.Point(300, 10)
         Me.UserName_Input.Name = "UserName_Input"
         Me.UserName_Input.Size = New System.Drawing.Size(368, 23)
         Me.UserName_Input.TabIndex = 5
         '
         'Password_Input
         '
-        Me.Password_Input.Location = New System.Drawing.Point(401, 57)
+        Me.Password_Input.Location = New System.Drawing.Point(300, 54)
         Me.Password_Input.Name = "Password_Input"
         Me.Password_Input.Size = New System.Drawing.Size(368, 23)
         Me.Password_Input.TabIndex = 6
         '
         'ServerURL_Input
         '
-        Me.ServerURL_Input.Location = New System.Drawing.Point(401, 108)
+        Me.ServerURL_Input.Location = New System.Drawing.Point(300, 105)
         Me.ServerURL_Input.Name = "ServerURL_Input"
         Me.ServerURL_Input.Size = New System.Drawing.Size(368, 23)
         Me.ServerURL_Input.TabIndex = 7
@@ -200,7 +200,7 @@ Partial Class MainForm
         'UserName
         '
         Me.UserName.AutoSize = True
-        Me.UserName.Location = New System.Drawing.Point(327, 16)
+        Me.UserName.Location = New System.Drawing.Point(226, 13)
         Me.UserName.Name = "UserName"
         Me.UserName.Size = New System.Drawing.Size(63, 16)
         Me.UserName.TabIndex = 8
@@ -209,7 +209,7 @@ Partial Class MainForm
         'Password
         '
         Me.Password.AutoSize = True
-        Me.Password.Location = New System.Drawing.Point(327, 64)
+        Me.Password.Location = New System.Drawing.Point(226, 61)
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(63, 16)
         Me.Password.TabIndex = 9
@@ -218,7 +218,7 @@ Partial Class MainForm
         'ServerURL
         '
         Me.ServerURL.AutoSize = True
-        Me.ServerURL.Location = New System.Drawing.Point(320, 116)
+        Me.ServerURL.Location = New System.Drawing.Point(219, 113)
         Me.ServerURL.Name = "ServerURL"
         Me.ServerURL.Size = New System.Drawing.Size(70, 16)
         Me.ServerURL.TabIndex = 10
@@ -227,7 +227,7 @@ Partial Class MainForm
         'Key
         '
         Me.Key.AutoSize = True
-        Me.Key.Location = New System.Drawing.Point(362, 159)
+        Me.Key.Location = New System.Drawing.Point(261, 156)
         Me.Key.Name = "Key"
         Me.Key.Size = New System.Drawing.Size(28, 16)
         Me.Key.TabIndex = 14
@@ -235,7 +235,7 @@ Partial Class MainForm
         '
         'Key_Input
         '
-        Me.Key_Input.Location = New System.Drawing.Point(401, 152)
+        Me.Key_Input.Location = New System.Drawing.Point(300, 149)
         Me.Key_Input.Name = "Key_Input"
         Me.Key_Input.Size = New System.Drawing.Size(368, 23)
         Me.Key_Input.TabIndex = 13
@@ -243,7 +243,7 @@ Partial Class MainForm
         '
         'Delevelop_Form_Show
         '
-        Me.Delevelop_Form_Show.Location = New System.Drawing.Point(572, 243)
+        Me.Delevelop_Form_Show.Location = New System.Drawing.Point(311, 194)
         Me.Delevelop_Form_Show.Name = "Delevelop_Form_Show"
         Me.Delevelop_Form_Show.Size = New System.Drawing.Size(142, 54)
         Me.Delevelop_Form_Show.TabIndex = 23
@@ -252,7 +252,7 @@ Partial Class MainForm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(369, 254)
+        Me.Button1.Location = New System.Drawing.Point(214, 194)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 24
@@ -263,7 +263,7 @@ Partial Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(769, 429)
+        Me.ClientSize = New System.Drawing.Size(699, 368)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Delevelop_Form_Show)
