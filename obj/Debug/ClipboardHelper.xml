@@ -22,6 +22,11 @@ ClipboardHelper
   使用此强类型资源类的所有资源查找执行重写。
 </summary>
 </member>
+<member name="P:ClipboardHelper.My.Resources.Resources._0b46f21fbe096b63d30f4b590d338744ebf8aca0">
+<summary>
+  查找 System.Drawing.Bitmap 类型的本地化资源。
+</summary>
+</member>
 <member name="P:ClipboardHelper.My.Resources.Resources.clipboard_alert_outline">
 <summary>
   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
@@ -45,7 +50,10 @@ User=
 Password=
 
 [DES]
-Key= 的本地化字符串。
+Key=
+
+[Setting]
+AllowInsecure= 的本地化字符串。
 </summary>
 </member>
 </members>

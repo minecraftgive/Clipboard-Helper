@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  一个强类型的资源类，用于查找本地化的字符串等。
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -58,6 +58,16 @@ Namespace My.Resources
             Set
                 resourceCulture = value
             End Set
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Drawing.Bitmap 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property _0b46f21fbe096b63d30f4b590d338744ebf8aca0() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("0b46f21fbe096b63d30f4b590d338744ebf8aca0", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
         End Property
         
         '''<summary>
@@ -97,7 +107,10 @@ Namespace My.Resources
         '''Password=
         '''
         '''[DES]
-        '''Key= 的本地化字符串。
+        '''Key=
+        '''
+        '''[Setting]
+        '''AllowInsecure= 的本地化字符串。
         '''</summary>
         Friend ReadOnly Property config_original() As String
             Get

@@ -18,3 +18,4 @@ C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Debug\ClipboardHelp
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Debug\ClipboardHelper.exe
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Debug\ClipboardHelper.xml
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Debug\ClipboardHelper.pdb
+C:\Users\minecraftgive\source\repos\Clipboard-Helper\bin\x86\Debug\MaterialSkin.dll
