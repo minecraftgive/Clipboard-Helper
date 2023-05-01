@@ -6,6 +6,7 @@ Public Class MainForm
     Public ConfigPath As String = Application.StartupPath() & "\config.ini"
     Public PingStatus As Boolean = False
     Public Show_ As Boolean = False
+    Public AllowInsecure_Bool As Boolean = False
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'HideMainForm()
@@ -69,18 +70,37 @@ Public Class MainForm
             SetTrayStatus("Waiting")
             If Not My.Computer.FileSystem.FileExists(ConfigPath) Then
                 WriteTextToFile(ConfigPath, My.Resources.config_original)
+                'ConfigPath_Label.Text = "" Me.ConfigPath
             End If
+            Developer_Form.ConfigPath_Label.Text = ConfigPath
             Dim ConfigParser As FileIniDataParser = New FileIniDataParser
             Dim Config As IniData
+            Try
+                Config = ConfigParser.ReadFile(ConfigPath)
 
-            Config = ConfigParser.ReadFile(ConfigPath)
+            Catch ex As Exception
+                SetTrayStatus("Error")
+                MsgBox(ex.Message)
+                Show_ = True
+                Me.Show()
+            End Try
+
+
 
             ModuleCBH.WebDAV_URL = Config.GetKey("WebDAV.URL")
             ModuleCBH.WebDAV_User = Config.GetKey("WebDAV.User")
             ModuleCBH.WebDAV_Password = Config.GetKey("WebDAV.Password")
             ModuleCBH.DES_Key = Config.GetKey("DES.Key")
 
-            If isEmpty(ModuleCBH.WebDAV_URL) Or isEmpty(ModuleCBH.WebDAV_User) Or isEmpty(ModuleCBH.WebDAV_Password) Or isEmpty(ModuleCBH.DES_Key) Then
+            ModuleCBH.AllowInsecrue = Config.GetKey("Setting.AllowInsecure")
+
+            UserName_Input.Text = ModuleCBH.WebDAV_User
+            Password_Input.Text = ModuleCBH.WebDAV_Password
+            ServerURL_Input.Text = ModuleCBH.WebDAV_URL
+            Key_Input.Text = DES_Key
+
+            'If isEmpty(ModuleCBH.WebDAV_URL) Or isEmpty(ModuleCBH.WebDAV_User) Or isEmpty(ModuleCBH.WebDAV_Password) Or isEmpty(ModuleCBH.DES_Key) Then
+            If isEmpty(ModuleCBH.WebDAV_URL) Or isEmpty(ModuleCBH.WebDAV_User) Then
                 SetTrayStatus("Error")
                 MsgBox("Error: config.ini is not configured properly.")
                 Show_ = True
@@ -88,10 +108,13 @@ Public Class MainForm
                 'Me.Visible = False
                 'Me.Hide()
                 'ExitApp()
-            Else
+                'Else
                 'Me.Hide()
             End If
 
+            If isEmpty(ModuleCBH.WebDAV_Password) Or isEmpty(ModuleCBH.DES_Key) Then
+
+            End If
             ' Test WebDAV
 
             '    Try
@@ -103,12 +126,14 @@ Public Class MainForm
             PingStatusToolStripMenuItem_Click(Nothing, Nothing)
 
         Catch ex As Exception
-            SetTrayStatus("Fatel Error!!!")
-            MsgBox("Error: " & ex.Message)
-            ExitApp()
+            SetTrayStatus("Error")
+            MsgBox("Fatel Error!!!  " & ex.Message & "Please Check Your Config.ini !!!")
+            'ExitApp()
         End Try
 
         SetTrayStatus("Normal")
+
+        update_RAW_Config_Display()
     End Sub
 
     Private Sub MainForm_VisibleChanged(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -168,6 +193,7 @@ Public Class MainForm
         PingStatusToolStripMenuItem.Text = "Ping: " & IIf(IsSuccessful, "Successful", "Failed")
         SetTrayStatus(IIf(IsSuccessful, "Normal", "Error"))
         PingStatus = IsSuccessful
+        Ping_Show.Text = IsSuccessful
     End Sub
 
     Private Sub PingStatusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PingStatusToolStripMenuItem.Click
@@ -179,6 +205,8 @@ Public Class MainForm
             ShowTrayTip("Successfully connected to server.")
         Else
             ShowTrayTip("Failed to connect to server.")
+            Show_ = True
+            Me.Show()
         End If
 
     End Sub
@@ -263,6 +291,43 @@ Public Class MainForm
             Me.Show()
         ElseIf Show_ = False Then
             Me.Hide()
+        End If
+    End Sub
+
+    Private Sub update_RAW_Config_Display()
+
+        Developer_Form.un_d_l.Text = WebDAV_User
+        Developer_Form.pw_d_l.Text = WebDAV_Password
+        Developer_Form.S_url_d_l.Text = WebDAV_URL
+        Developer_Form.key_d_l.Text = DES_Key + ""
+    End Sub
+
+
+    Private Sub SaveConfig_Botton_Click(sender As Object, e As EventArgs) Handles SaveConfig_Botton.Click
+        FileOpen(2, ConfigPath, OpenMode.Output)
+        PrintLine(2, "[WebDAV]")
+        PrintLine(2, "URL=" + ServerURL_Input.Text)
+        PrintLine(2, "User=" + UserName_Input.Text)
+        PrintLine(2, "Password=" + Password_Input.Text)
+        PrintLine(2, "")
+        PrintLine(2, "[DES]")
+        PrintLine(2, "Key=" + Key_Input.Text)
+        FileClose(2)
+        MsgBox("Save Config Success !")
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        MsgBox(AllowInsecrue)
+    End Sub
+
+    Private Sub Delevelop_Form_Show_Click(sender As Object, e As EventArgs) Handles Delevelop_Form_Show.Click
+        Developer_Form.Show()
+    End Sub
+
+    Private Sub TextBox1_Leave(sender As Object, e As EventArgs) Handles Key_Input.Leave
+        If Key_Input.Text.Length Mod 8.0! = 1 Then
+            MsgBox("Key Length must mod 8 must be 0 !")
+            'Key_Input.setFocus()
         End If
     End Sub
 End Class

@@ -7,6 +7,7 @@ Module ModuleCBH
     Public WebDAV_User As String
     Public WebDAV_Password As String
     Public DES_Key As String
+    Public AllowInsecrue As String
 
     Private WebDAVObject As IWebDavClient
 

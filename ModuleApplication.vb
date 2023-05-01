@@ -3,9 +3,9 @@ Imports System.Resources
 Imports System.Text
 
 Module ModuleApplication
-    Public Function HideMainForm()
-        MainForm.Hide()
-    End Function
+    'Public Function HideMainForm()
+    '    MainForm.Hide()
+    'End Function
 
     Public Function StringToStream(input As String, enc As Encoding) As Stream
         Dim memoryStream = New MemoryStream()

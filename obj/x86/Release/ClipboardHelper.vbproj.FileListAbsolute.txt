@@ -35,3 +35,4 @@ C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Release\ClipboardHe
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Release\ClipboardHelper.exe
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Release\ClipboardHelper.xml
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Release\ClipboardHelper.pdb
+C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\x86\Release\ClipboardHelper.Developer_Form.resources
