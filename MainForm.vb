@@ -1,14 +1,37 @@
 ﻿Imports IniParser
 Imports IniParser.Model
+Imports MaterialSkin
+Imports MaterialSkin.Controls
 
 Public Class MainForm
 
+    'Inherits MaterialForm
     Public ConfigPath As String = Application.StartupPath() & "\config.ini"
     Public PingStatus As Boolean = False
     Public Show_ As Boolean = False
     Public AllowInsecure_Bool As Boolean = False
+    Public Develop_Click_Count As Int16 = 0
+
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+
+
+        Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
+        SkinManager.AddFormToManage(Me)
+        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+
+        Develop_Form_Show.BackColor = Color.Transparent
+        Develop_Form_Show.FlatAppearance.MouseOverBackColor = Color.Transparent
+
+
+
+
+
+
+
 
         'HideMainForm()
         'Me.Visible = False
@@ -56,6 +79,7 @@ Public Class MainForm
         'MainForm_Shown()
         'Me.Visible = True
         'Me.Show()
+
         Me.Hide()
         Main_Function()
 
@@ -277,7 +301,7 @@ Public Class MainForm
         Me.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Hide_Botton.Click
+    Private Sub Hide_Botton_Click(sender As Object, e As EventArgs) Handles Hide_Botton.Click
         Show_ = False
         Me.Hide()
     End Sub
@@ -321,12 +345,13 @@ Public Class MainForm
         MsgBox("Save Config Success !")
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        'MsgBox(AllowInsecrue)
-    End Sub
+    Private Sub Delevelop_Form_Show_Click(sender As Object, e As EventArgs) Handles Develop_Form_Show.Click
+        Develop_Click_Count += 1
 
-    Private Sub Delevelop_Form_Show_Click(sender As Object, e As EventArgs) Handles Delevelop_Form_Show.Click
-        Developer_Form.Show()
+        If Develop_Click_Count >= 3 Then
+            Developer_Form.Show()
+        End If
+
     End Sub
 
     Private Sub TextBox1_Leave(sender As Object, e As EventArgs) Handles Key_Input.Leave
@@ -335,4 +360,5 @@ Public Class MainForm
             'Key_Input.setFocus()
         End If
     End Sub
+
 End Class
