@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainForm
     '注意: 以下过程是 Windows 窗体设计器所必需的
     '可以使用 Windows 窗体设计器修改它。  
     '不要使用代码编辑器修改它。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Tray = New System.Windows.Forms.NotifyIcon(Me.components)
@@ -39,6 +39,18 @@ Partial Class MainForm
         Me.Hide_Botton = New System.Windows.Forms.Button()
         Me.Refresh_Botton = New System.Windows.Forms.Button()
         Me.Exit_Botton = New System.Windows.Forms.Button()
+        Me.SaveConfig_Botton = New System.Windows.Forms.Button()
+        Me.Ping_Show = New System.Windows.Forms.Label()
+        Me.UserName_Input = New System.Windows.Forms.TextBox()
+        Me.Password_Input = New System.Windows.Forms.TextBox()
+        Me.ServerURL_Input = New System.Windows.Forms.TextBox()
+        Me.UserName = New System.Windows.Forms.Label()
+        Me.Password = New System.Windows.Forms.Label()
+        Me.ServerURL = New System.Windows.Forms.Label()
+        Me.Key = New System.Windows.Forms.Label()
+        Me.Key_Input = New System.Windows.Forms.TextBox()
+        Me.Delevelop_Form_Show = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TrayMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -119,7 +131,7 @@ Partial Class MainForm
         '
         'Hide_Botton
         '
-        Me.Hide_Botton.Location = New System.Drawing.Point(14, 32)
+        Me.Hide_Botton.Location = New System.Drawing.Point(13, 13)
         Me.Hide_Botton.Margin = New System.Windows.Forms.Padding(4)
         Me.Hide_Botton.Name = "Hide_Botton"
         Me.Hide_Botton.Size = New System.Drawing.Size(145, 61)
@@ -129,29 +141,142 @@ Partial Class MainForm
         '
         'Refresh_Botton
         '
-        Me.Refresh_Botton.Location = New System.Drawing.Point(225, 36)
+        Me.Refresh_Botton.Location = New System.Drawing.Point(166, 13)
         Me.Refresh_Botton.Margin = New System.Windows.Forms.Padding(4)
         Me.Refresh_Botton.Name = "Refresh_Botton"
-        Me.Refresh_Botton.Size = New System.Drawing.Size(111, 56)
+        Me.Refresh_Botton.Size = New System.Drawing.Size(111, 61)
         Me.Refresh_Botton.TabIndex = 1
         Me.Refresh_Botton.Text = "Refresh"
         Me.Refresh_Botton.UseVisualStyleBackColor = True
         '
         'Exit_Botton
         '
-        Me.Exit_Botton.Location = New System.Drawing.Point(72, 149)
+        Me.Exit_Botton.Location = New System.Drawing.Point(12, 81)
         Me.Exit_Botton.Name = "Exit_Botton"
-        Me.Exit_Botton.Size = New System.Drawing.Size(192, 68)
+        Me.Exit_Botton.Size = New System.Drawing.Size(265, 61)
         Me.Exit_Botton.TabIndex = 2
         Me.Exit_Botton.Text = "Exit"
         Me.Exit_Botton.UseVisualStyleBackColor = True
+        '
+        'SaveConfig_Botton
+        '
+        Me.SaveConfig_Botton.Location = New System.Drawing.Point(13, 159)
+        Me.SaveConfig_Botton.Name = "SaveConfig_Botton"
+        Me.SaveConfig_Botton.Size = New System.Drawing.Size(149, 61)
+        Me.SaveConfig_Botton.TabIndex = 3
+        Me.SaveConfig_Botton.Text = "Save"
+        Me.SaveConfig_Botton.UseVisualStyleBackColor = True
+        '
+        'Ping_Show
+        '
+        Me.Ping_Show.AutoSize = True
+        Me.Ping_Show.Location = New System.Drawing.Point(168, 159)
+        Me.Ping_Show.Name = "Ping_Show"
+        Me.Ping_Show.Size = New System.Drawing.Size(56, 16)
+        Me.Ping_Show.TabIndex = 4
+        Me.Ping_Show.Text = "Unknown"
+        '
+        'UserName_Input
+        '
+        Me.UserName_Input.Location = New System.Drawing.Point(401, 13)
+        Me.UserName_Input.Name = "UserName_Input"
+        Me.UserName_Input.Size = New System.Drawing.Size(368, 23)
+        Me.UserName_Input.TabIndex = 5
+        '
+        'Password_Input
+        '
+        Me.Password_Input.Location = New System.Drawing.Point(401, 57)
+        Me.Password_Input.Name = "Password_Input"
+        Me.Password_Input.Size = New System.Drawing.Size(368, 23)
+        Me.Password_Input.TabIndex = 6
+        '
+        'ServerURL_Input
+        '
+        Me.ServerURL_Input.Location = New System.Drawing.Point(401, 108)
+        Me.ServerURL_Input.Name = "ServerURL_Input"
+        Me.ServerURL_Input.Size = New System.Drawing.Size(368, 23)
+        Me.ServerURL_Input.TabIndex = 7
+        '
+        'UserName
+        '
+        Me.UserName.AutoSize = True
+        Me.UserName.Location = New System.Drawing.Point(327, 16)
+        Me.UserName.Name = "UserName"
+        Me.UserName.Size = New System.Drawing.Size(63, 16)
+        Me.UserName.TabIndex = 8
+        Me.UserName.Text = "UserName"
+        '
+        'Password
+        '
+        Me.Password.AutoSize = True
+        Me.Password.Location = New System.Drawing.Point(327, 64)
+        Me.Password.Name = "Password"
+        Me.Password.Size = New System.Drawing.Size(63, 16)
+        Me.Password.TabIndex = 9
+        Me.Password.Text = "Password"
+        '
+        'ServerURL
+        '
+        Me.ServerURL.AutoSize = True
+        Me.ServerURL.Location = New System.Drawing.Point(320, 116)
+        Me.ServerURL.Name = "ServerURL"
+        Me.ServerURL.Size = New System.Drawing.Size(70, 16)
+        Me.ServerURL.TabIndex = 10
+        Me.ServerURL.Text = "ServerURL"
+        '
+        'Key
+        '
+        Me.Key.AutoSize = True
+        Me.Key.Location = New System.Drawing.Point(362, 159)
+        Me.Key.Name = "Key"
+        Me.Key.Size = New System.Drawing.Size(28, 16)
+        Me.Key.TabIndex = 14
+        Me.Key.Text = "Key"
+        '
+        'Key_Input
+        '
+        Me.Key_Input.Location = New System.Drawing.Point(401, 152)
+        Me.Key_Input.Name = "Key_Input"
+        Me.Key_Input.Size = New System.Drawing.Size(368, 23)
+        Me.Key_Input.TabIndex = 13
+        Me.Key_Input.WordWrap = False
+        '
+        'Delevelop_Form_Show
+        '
+        Me.Delevelop_Form_Show.Location = New System.Drawing.Point(572, 243)
+        Me.Delevelop_Form_Show.Name = "Delevelop_Form_Show"
+        Me.Delevelop_Form_Show.Size = New System.Drawing.Size(142, 54)
+        Me.Delevelop_Form_Show.TabIndex = 23
+        Me.Delevelop_Form_Show.Text = "Developer"
+        Me.Delevelop_Form_Show.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(369, 254)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(468, 244)
+        Me.ClientSize = New System.Drawing.Size(769, 429)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Delevelop_Form_Show)
+        Me.Controls.Add(Me.Key)
+        Me.Controls.Add(Me.Key_Input)
+        Me.Controls.Add(Me.ServerURL)
+        Me.Controls.Add(Me.Password)
+        Me.Controls.Add(Me.UserName)
+        Me.Controls.Add(Me.ServerURL_Input)
+        Me.Controls.Add(Me.Password_Input)
+        Me.Controls.Add(Me.UserName_Input)
+        Me.Controls.Add(Me.Ping_Show)
+        Me.Controls.Add(Me.SaveConfig_Botton)
         Me.Controls.Add(Me.Exit_Botton)
         Me.Controls.Add(Me.Refresh_Botton)
         Me.Controls.Add(Me.Hide_Botton)
@@ -165,6 +290,7 @@ Partial Class MainForm
         Me.Text = "CilpBoardHelper_GUI"
         Me.TrayMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -184,4 +310,16 @@ Partial Class MainForm
     Friend WithEvents Hide_Botton As Button
     Friend WithEvents Refresh_Botton As Button
     Friend WithEvents Exit_Botton As Button
+    Friend WithEvents SaveConfig_Botton As Button
+    Friend WithEvents Ping_Show As Label
+    Friend WithEvents UserName_Input As TextBox
+    Friend WithEvents Password_Input As TextBox
+    Friend WithEvents ServerURL_Input As TextBox
+    Friend WithEvents UserName As Label
+    Friend WithEvents Password As Label
+    Friend WithEvents ServerURL As Label
+    Friend WithEvents Key As Label
+    Friend WithEvents Key_Input As TextBox
+    Friend WithEvents Delevelop_Form_Show As Button
+    Friend WithEvents Button1 As Button
 End Class
