@@ -9,6 +9,7 @@ Public Class MainForm
     Public AllowInsecure_Bool As Boolean = False
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         'HideMainForm()
         'Me.Visible = False
         'Try
@@ -92,7 +93,10 @@ Public Class MainForm
             ModuleCBH.WebDAV_Password = Config.GetKey("WebDAV.Password")
             ModuleCBH.DES_Key = Config.GetKey("DES.Key")
 
-            ModuleCBH.AllowInsecrue = Config.GetKey("Setting.AllowInsecure")
+            ModuleCBH.Settings_AllowEmptyKey = IIf(Config.GetKey("Settings.AllowEmptyKey") = "true", True, False)
+            'MsgBox(Config.GetKey("Test.test"))
+
+
 
             UserName_Input.Text = ModuleCBH.WebDAV_User
             Password_Input.Text = ModuleCBH.WebDAV_Password
@@ -220,6 +224,7 @@ Public Class MainForm
             If isEmpty(RawString) Then
                 ShowTrayTip("Error occured when getting clipboard content.")
             End If
+            'MsgBox(RawString)
 
             Dim Decrypted As String = DecryptDes(RawString, DES_Key, "Clipboar")
             Clipboard.SetText(Decrypted)
@@ -317,7 +322,7 @@ Public Class MainForm
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox(AllowInsecrue)
+        'MsgBox(AllowInsecrue)
     End Sub
 
     Private Sub Delevelop_Form_Show_Click(sender As Object, e As EventArgs) Handles Delevelop_Form_Show.Click
