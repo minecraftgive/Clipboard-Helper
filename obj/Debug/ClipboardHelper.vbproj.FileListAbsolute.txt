@@ -36,3 +36,5 @@ C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.v
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.exe
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.xml
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.pdb
+C:\Users\minecraftgive\source\repos\Clipboard-Helper\bin\Debug\MaterialSkin.dll
+C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.MDUI_TEST_FORM.resources

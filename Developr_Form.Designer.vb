@@ -34,6 +34,7 @@ Partial Class Developer_Form
         Me.OverWrite_To_Defalut_Config = New System.Windows.Forms.Button()
         Me.Open_With_Notepad = New System.Windows.Forms.Button()
         Me.Show_Me_CB = New System.Windows.Forms.Button()
+        Me.MDUI_TEST_FORM_Botton = New MaterialSkin.Controls.MaterialButton()
         Me.SuspendLayout()
         '
         'key_d
@@ -112,7 +113,7 @@ Partial Class Developer_Form
         'OverWrite_To_Defalut_Config
         '
         Me.OverWrite_To_Defalut_Config.Cursor = System.Windows.Forms.Cursors.No
-        Me.OverWrite_To_Defalut_Config.Location = New System.Drawing.Point(237, 207)
+        Me.OverWrite_To_Defalut_Config.Location = New System.Drawing.Point(278, 209)
         Me.OverWrite_To_Defalut_Config.Name = "OverWrite_To_Defalut_Config"
         Me.OverWrite_To_Defalut_Config.Size = New System.Drawing.Size(107, 43)
         Me.OverWrite_To_Defalut_Config.TabIndex = 32
@@ -130,18 +131,38 @@ Partial Class Developer_Form
         '
         'Show_Me_CB
         '
-        Me.Show_Me_CB.Location = New System.Drawing.Point(28, 240)
+        Me.Show_Me_CB.Location = New System.Drawing.Point(12, 226)
         Me.Show_Me_CB.Name = "Show_Me_CB"
         Me.Show_Me_CB.Size = New System.Drawing.Size(80, 44)
         Me.Show_Me_CB.TabIndex = 34
         Me.Show_Me_CB.Text = "SHOWMECB"
         Me.Show_Me_CB.UseVisualStyleBackColor = True
         '
+        'MDUI_TEST_FORM_Botton
+        '
+        Me.MDUI_TEST_FORM_Botton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MDUI_TEST_FORM_Botton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MDUI_TEST_FORM_Botton.Depth = 0
+        Me.MDUI_TEST_FORM_Botton.HighEmphasis = True
+        Me.MDUI_TEST_FORM_Botton.Icon = Nothing
+        Me.MDUI_TEST_FORM_Botton.Location = New System.Drawing.Point(99, 245)
+        Me.MDUI_TEST_FORM_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MDUI_TEST_FORM_Botton.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MDUI_TEST_FORM_Botton.Name = "MDUI_TEST_FORM_Botton"
+        Me.MDUI_TEST_FORM_Botton.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MDUI_TEST_FORM_Botton.Size = New System.Drawing.Size(135, 36)
+        Me.MDUI_TEST_FORM_Botton.TabIndex = 35
+        Me.MDUI_TEST_FORM_Botton.Text = "MDUITESTSHOW"
+        Me.MDUI_TEST_FORM_Botton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.MDUI_TEST_FORM_Botton.UseAccentColor = False
+        Me.MDUI_TEST_FORM_Botton.UseVisualStyleBackColor = True
+        '
         'Developer_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(510, 296)
+        Me.Controls.Add(Me.MDUI_TEST_FORM_Botton)
         Me.Controls.Add(Me.Show_Me_CB)
         Me.Controls.Add(Me.Open_With_Notepad)
         Me.Controls.Add(Me.OverWrite_To_Defalut_Config)
@@ -173,4 +194,5 @@ Partial Class Developer_Form
     Friend WithEvents OverWrite_To_Defalut_Config As Button
     Friend WithEvents Open_With_Notepad As Button
     Friend WithEvents Show_Me_CB As Button
+    Friend WithEvents MDUI_TEST_FORM_Botton As MaterialSkin.Controls.MaterialButton
 End Class
