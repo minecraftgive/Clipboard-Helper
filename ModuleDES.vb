@@ -7,6 +7,9 @@
         'If String.IsNullOrEmpty(myIV) Then
         '    myIV = Me.JMIv
         'End If
+        If ModuleCBH.Settings_AllowEmptyKey Then
+            Return SourceStr
+        End If
         Dim des As New System.Security.Cryptography.DESCryptoServiceProvider 'DES算法
         'Dim DES As New System.Security.Cryptography.TripleDESCryptoServiceProvider'TripleDES算法
         Dim inputByteArray As Byte()
@@ -25,6 +28,9 @@
 
 
     Public Function DecryptDes(ByVal SourceStr As String, ByVal myKey As String, ByVal myIV As String) As String    '使用标准DES对称解密
+        If ModuleCBH.Settings_AllowEmptyKey Then
+            Return SourceStr
+        End If
         Dim des As New System.Security.Cryptography.DESCryptoServiceProvider 'DES算法
         'Dim DES As New System.Security.Cryptography.TripleDESCryptoServiceProvider'TripleDES算法
         des.Key = System.Text.Encoding.UTF8.GetBytes(myKey) 'myKey DES用8个字符，TripleDES要24个字符
