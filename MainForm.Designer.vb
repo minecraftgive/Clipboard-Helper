@@ -1,6 +1,7 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainForm
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
+    'Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -36,10 +37,6 @@ Partial Class MainForm
         Me.GUIConfigToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerPing = New System.Windows.Forms.Timer(Me.components)
-        Me.Hide_Botton = New System.Windows.Forms.Button()
-        Me.Refresh_Botton = New System.Windows.Forms.Button()
-        Me.Exit_Botton = New System.Windows.Forms.Button()
-        Me.SaveConfig_Botton = New System.Windows.Forms.Button()
         Me.Ping_Show = New System.Windows.Forms.Label()
         Me.UserName_Input = New System.Windows.Forms.TextBox()
         Me.Password_Input = New System.Windows.Forms.TextBox()
@@ -49,8 +46,11 @@ Partial Class MainForm
         Me.ServerURL = New System.Windows.Forms.Label()
         Me.Key = New System.Windows.Forms.Label()
         Me.Key_Input = New System.Windows.Forms.TextBox()
-        Me.Delevelop_Form_Show = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Hide_Botton = New MaterialSkin.Controls.MaterialButton()
+        Me.Refresh_Botton = New MaterialSkin.Controls.MaterialButton()
+        Me.Exit_Botton = New MaterialSkin.Controls.MaterialButton()
+        Me.SaveConfig_Botton = New MaterialSkin.Controls.MaterialButton()
+        Me.Develop_Form_Show = New System.Windows.Forms.Button()
         Me.TrayMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -129,48 +129,10 @@ Partial Class MainForm
         'TimerPing
         '
         '
-        'Hide_Botton
-        '
-        Me.Hide_Botton.Location = New System.Drawing.Point(13, 13)
-        Me.Hide_Botton.Margin = New System.Windows.Forms.Padding(4)
-        Me.Hide_Botton.Name = "Hide_Botton"
-        Me.Hide_Botton.Size = New System.Drawing.Size(93, 61)
-        Me.Hide_Botton.TabIndex = 0
-        Me.Hide_Botton.Text = "Hide"
-        Me.Hide_Botton.UseVisualStyleBackColor = True
-        '
-        'Refresh_Botton
-        '
-        Me.Refresh_Botton.Location = New System.Drawing.Point(114, 13)
-        Me.Refresh_Botton.Margin = New System.Windows.Forms.Padding(4)
-        Me.Refresh_Botton.Name = "Refresh_Botton"
-        Me.Refresh_Botton.Size = New System.Drawing.Size(85, 61)
-        Me.Refresh_Botton.TabIndex = 1
-        Me.Refresh_Botton.Text = "Refresh"
-        Me.Refresh_Botton.UseVisualStyleBackColor = True
-        '
-        'Exit_Botton
-        '
-        Me.Exit_Botton.Location = New System.Drawing.Point(12, 81)
-        Me.Exit_Botton.Name = "Exit_Botton"
-        Me.Exit_Botton.Size = New System.Drawing.Size(187, 61)
-        Me.Exit_Botton.TabIndex = 2
-        Me.Exit_Botton.Text = "Exit"
-        Me.Exit_Botton.UseVisualStyleBackColor = True
-        '
-        'SaveConfig_Botton
-        '
-        Me.SaveConfig_Botton.Location = New System.Drawing.Point(13, 159)
-        Me.SaveConfig_Botton.Name = "SaveConfig_Botton"
-        Me.SaveConfig_Botton.Size = New System.Drawing.Size(106, 61)
-        Me.SaveConfig_Botton.TabIndex = 3
-        Me.SaveConfig_Botton.Text = "Save"
-        Me.SaveConfig_Botton.UseVisualStyleBackColor = True
-        '
         'Ping_Show
         '
         Me.Ping_Show.AutoSize = True
-        Me.Ping_Show.Location = New System.Drawing.Point(125, 159)
+        Me.Ping_Show.Location = New System.Drawing.Point(119, 216)
         Me.Ping_Show.Name = "Ping_Show"
         Me.Ping_Show.Size = New System.Drawing.Size(56, 16)
         Me.Ping_Show.TabIndex = 4
@@ -178,21 +140,21 @@ Partial Class MainForm
         '
         'UserName_Input
         '
-        Me.UserName_Input.Location = New System.Drawing.Point(300, 10)
+        Me.UserName_Input.Location = New System.Drawing.Point(294, 67)
         Me.UserName_Input.Name = "UserName_Input"
         Me.UserName_Input.Size = New System.Drawing.Size(368, 23)
         Me.UserName_Input.TabIndex = 5
         '
         'Password_Input
         '
-        Me.Password_Input.Location = New System.Drawing.Point(300, 54)
+        Me.Password_Input.Location = New System.Drawing.Point(294, 111)
         Me.Password_Input.Name = "Password_Input"
         Me.Password_Input.Size = New System.Drawing.Size(368, 23)
         Me.Password_Input.TabIndex = 6
         '
         'ServerURL_Input
         '
-        Me.ServerURL_Input.Location = New System.Drawing.Point(300, 105)
+        Me.ServerURL_Input.Location = New System.Drawing.Point(294, 162)
         Me.ServerURL_Input.Name = "ServerURL_Input"
         Me.ServerURL_Input.Size = New System.Drawing.Size(368, 23)
         Me.ServerURL_Input.TabIndex = 7
@@ -200,7 +162,7 @@ Partial Class MainForm
         'UserName
         '
         Me.UserName.AutoSize = True
-        Me.UserName.Location = New System.Drawing.Point(226, 13)
+        Me.UserName.Location = New System.Drawing.Point(220, 70)
         Me.UserName.Name = "UserName"
         Me.UserName.Size = New System.Drawing.Size(63, 16)
         Me.UserName.TabIndex = 8
@@ -209,7 +171,7 @@ Partial Class MainForm
         'Password
         '
         Me.Password.AutoSize = True
-        Me.Password.Location = New System.Drawing.Point(226, 61)
+        Me.Password.Location = New System.Drawing.Point(220, 118)
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(63, 16)
         Me.Password.TabIndex = 9
@@ -218,7 +180,7 @@ Partial Class MainForm
         'ServerURL
         '
         Me.ServerURL.AutoSize = True
-        Me.ServerURL.Location = New System.Drawing.Point(219, 113)
+        Me.ServerURL.Location = New System.Drawing.Point(213, 170)
         Me.ServerURL.Name = "ServerURL"
         Me.ServerURL.Size = New System.Drawing.Size(70, 16)
         Me.ServerURL.TabIndex = 10
@@ -227,7 +189,7 @@ Partial Class MainForm
         'Key
         '
         Me.Key.AutoSize = True
-        Me.Key.Location = New System.Drawing.Point(261, 156)
+        Me.Key.Location = New System.Drawing.Point(255, 213)
         Me.Key.Name = "Key"
         Me.Key.Size = New System.Drawing.Size(28, 16)
         Me.Key.TabIndex = 14
@@ -235,38 +197,117 @@ Partial Class MainForm
         '
         'Key_Input
         '
-        Me.Key_Input.Location = New System.Drawing.Point(300, 149)
+        Me.Key_Input.Location = New System.Drawing.Point(294, 206)
         Me.Key_Input.Name = "Key_Input"
         Me.Key_Input.Size = New System.Drawing.Size(368, 23)
         Me.Key_Input.TabIndex = 13
         Me.Key_Input.WordWrap = False
         '
-        'Delevelop_Form_Show
+        'Hide_Botton
         '
-        Me.Delevelop_Form_Show.Location = New System.Drawing.Point(311, 194)
-        Me.Delevelop_Form_Show.Name = "Delevelop_Form_Show"
-        Me.Delevelop_Form_Show.Size = New System.Drawing.Size(142, 54)
-        Me.Delevelop_Form_Show.TabIndex = 23
-        Me.Delevelop_Form_Show.Text = "Developer"
-        Me.Delevelop_Form_Show.UseVisualStyleBackColor = True
+        Me.Hide_Botton.AutoSize = False
+        Me.Hide_Botton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Hide_Botton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.Hide_Botton.Depth = 0
+        Me.Hide_Botton.HighEmphasis = True
+        Me.Hide_Botton.Icon = Nothing
+        Me.Hide_Botton.Location = New System.Drawing.Point(7, 70)
+        Me.Hide_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Hide_Botton.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Hide_Botton.Name = "Hide_Botton"
+        Me.Hide_Botton.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.Hide_Botton.Size = New System.Drawing.Size(93, 57)
+        Me.Hide_Botton.TabIndex = 25
+        Me.Hide_Botton.Text = "Hide"
+        Me.Hide_Botton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.Hide_Botton.UseAccentColor = False
+        Me.Hide_Botton.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Refresh_Botton
         '
-        Me.Button1.Location = New System.Drawing.Point(214, 194)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 24
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Refresh_Botton.AutoSize = False
+        Me.Refresh_Botton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Refresh_Botton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.Refresh_Botton.Depth = 0
+        Me.Refresh_Botton.HighEmphasis = True
+        Me.Refresh_Botton.Icon = Nothing
+        Me.Refresh_Botton.Location = New System.Drawing.Point(108, 70)
+        Me.Refresh_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Refresh_Botton.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Refresh_Botton.Name = "Refresh_Botton"
+        Me.Refresh_Botton.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.Refresh_Botton.Size = New System.Drawing.Size(93, 57)
+        Me.Refresh_Botton.TabIndex = 26
+        Me.Refresh_Botton.Text = "Refresh"
+        Me.Refresh_Botton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.Refresh_Botton.UseAccentColor = False
+        Me.Refresh_Botton.UseVisualStyleBackColor = True
+        '
+        'Exit_Botton
+        '
+        Me.Exit_Botton.AutoSize = False
+        Me.Exit_Botton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Exit_Botton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.Exit_Botton.Depth = 0
+        Me.Exit_Botton.HighEmphasis = True
+        Me.Exit_Botton.Icon = Nothing
+        Me.Exit_Botton.Location = New System.Drawing.Point(7, 136)
+        Me.Exit_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Exit_Botton.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Exit_Botton.Name = "Exit_Botton"
+        Me.Exit_Botton.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.Exit_Botton.Size = New System.Drawing.Size(194, 61)
+        Me.Exit_Botton.TabIndex = 27
+        Me.Exit_Botton.Text = "Exit"
+        Me.Exit_Botton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.Exit_Botton.UseAccentColor = False
+        Me.Exit_Botton.UseVisualStyleBackColor = True
+        '
+        'SaveConfig_Botton
+        '
+        Me.SaveConfig_Botton.AutoSize = False
+        Me.SaveConfig_Botton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.SaveConfig_Botton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.SaveConfig_Botton.Depth = 0
+        Me.SaveConfig_Botton.HighEmphasis = True
+        Me.SaveConfig_Botton.Icon = Nothing
+        Me.SaveConfig_Botton.Location = New System.Drawing.Point(7, 205)
+        Me.SaveConfig_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.SaveConfig_Botton.MouseState = MaterialSkin.MouseState.HOVER
+        Me.SaveConfig_Botton.Name = "SaveConfig_Botton"
+        Me.SaveConfig_Botton.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.SaveConfig_Botton.Size = New System.Drawing.Size(105, 61)
+        Me.SaveConfig_Botton.TabIndex = 28
+        Me.SaveConfig_Botton.Text = "Save"
+        Me.SaveConfig_Botton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.SaveConfig_Botton.UseAccentColor = False
+        Me.SaveConfig_Botton.UseVisualStyleBackColor = True
+        '
+        'Develop_Form_Show
+        '
+        Me.Develop_Form_Show.BackColor = System.Drawing.SystemColors.Control
+        Me.Develop_Form_Show.FlatAppearance.BorderSize = 0
+        Me.Develop_Form_Show.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
+        Me.Develop_Form_Show.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Develop_Form_Show.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Develop_Form_Show.Location = New System.Drawing.Point(-1, -1)
+        Me.Develop_Form_Show.Name = "Develop_Form_Show"
+        Me.Develop_Form_Show.Size = New System.Drawing.Size(28, 21)
+        Me.Develop_Form_Show.TabIndex = 23
+        Me.Develop_Form_Show.UseVisualStyleBackColor = False
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(699, 368)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Delevelop_Form_Show)
+        Me.AutoScroll = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ClientSize = New System.Drawing.Size(711, 426)
+        Me.Controls.Add(Me.SaveConfig_Botton)
+        Me.Controls.Add(Me.Exit_Botton)
+        Me.Controls.Add(Me.Refresh_Botton)
+        Me.Controls.Add(Me.Hide_Botton)
+        Me.Controls.Add(Me.Develop_Form_Show)
         Me.Controls.Add(Me.Key)
         Me.Controls.Add(Me.Key_Input)
         Me.Controls.Add(Me.ServerURL)
@@ -276,10 +317,6 @@ Partial Class MainForm
         Me.Controls.Add(Me.Password_Input)
         Me.Controls.Add(Me.UserName_Input)
         Me.Controls.Add(Me.Ping_Show)
-        Me.Controls.Add(Me.SaveConfig_Botton)
-        Me.Controls.Add(Me.Exit_Botton)
-        Me.Controls.Add(Me.Refresh_Botton)
-        Me.Controls.Add(Me.Hide_Botton)
         Me.Font = New System.Drawing.Font("JetBrains Mono", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -287,6 +324,7 @@ Partial Class MainForm
         Me.MinimizeBox = False
         Me.Name = "MainForm"
         Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CilpBoardHelper_GUI"
         Me.TrayMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -307,10 +345,6 @@ Partial Class MainForm
     Friend WithEvents PingStatusToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GUIConfigToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Hide_Botton As Button
-    Friend WithEvents Refresh_Botton As Button
-    Friend WithEvents Exit_Botton As Button
-    Friend WithEvents SaveConfig_Botton As Button
     Friend WithEvents Ping_Show As Label
     Friend WithEvents UserName_Input As TextBox
     Friend WithEvents Password_Input As TextBox
@@ -320,6 +354,9 @@ Partial Class MainForm
     Friend WithEvents ServerURL As Label
     Friend WithEvents Key As Label
     Friend WithEvents Key_Input As TextBox
-    Friend WithEvents Delevelop_Form_Show As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Hide_Botton As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents Refresh_Botton As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents Exit_Botton As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents SaveConfig_Botton As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents Develop_Form_Show As Button
 End Class
