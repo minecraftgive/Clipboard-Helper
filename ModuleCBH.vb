@@ -8,6 +8,7 @@ Module ModuleCBH
     Public WebDAV_Password As String
     Public DES_Key As String
     Public Settings_AllowEmptyKey As Boolean
+    Public Experimental_AutoCreateStorageFile As Boolean
 
     Private WebDAVObject As IWebDavClient
 

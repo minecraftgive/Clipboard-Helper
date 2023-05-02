@@ -120,6 +120,7 @@ Public Class MainForm
             ModuleCBH.Settings_AllowEmptyKey = IIf(Config.GetKey("Settings.AllowEmptyKey") = "true", True, False)
             'MsgBox(Config.GetKey("Test.test"))
 
+            ModuleCBH.Experimental_AutoCreateStorageFile = IIf(Config.GetKey("Experimental.AutoCreateStorageFile") = "true", True, False)
 
 
             UserName_Input.Text = ModuleCBH.WebDAV_User
@@ -154,7 +155,10 @@ Public Class MainForm
 
             Dim IsSuccessful = CBH_Ping()
             If Not IsSuccessful Then
-                CBH_Put("")
+                If ModuleCBH.Experimental_AutoCreateStorageFile Then
+                    CBH_Put("")
+                End If
+
             End If
 
 
