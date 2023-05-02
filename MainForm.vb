@@ -229,7 +229,13 @@ Public Class MainForm
         PingStatusToolStripMenuItem.Text = "Ping: " & IIf(IsSuccessful, "Successful", "Failed")
         SetTrayStatus(IIf(IsSuccessful, "Normal", "Error"))
         PingStatus = IsSuccessful
-        Ping_Show.Text = IsSuccessful
+
+        If IsSuccessful Then
+            Ping_Show.Text = "Connected !"
+        Else
+            Ping_Show.Text = "DisConnected !"
+        End If
+
     End Sub
 
     Private Sub PingStatusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PingStatusToolStripMenuItem.Click
@@ -369,5 +375,9 @@ Public Class MainForm
         End If
     End Sub
 
-
+    Private Sub MainForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        e.Cancel = True
+        Show_ = False
+        Me.Hide()
+    End Sub
 End Class
