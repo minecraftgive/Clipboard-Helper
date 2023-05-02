@@ -151,6 +151,14 @@ Public Class MainForm
             'Catch ex As Exception
             '    ShowTrayTip("Error while testing WebDAV: " & ex.Message)
             'End Try
+
+            Dim IsSuccessful = CBH_Ping()
+            If Not IsSuccessful Then
+                CBH_Put("")
+            End If
+
+
+
             PingStatusToolStripMenuItem_Click(Nothing, Nothing)
 
         Catch ex As Exception
