@@ -1,0 +1,8 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs/Clipboard-Helper/v17/.wsuo
+/.vs/ClipboardHelper/FileContentIndex/read.lock
+/.vs/ClipboardHelper/FileContentIndex/2587c558-e6c1-4792-86c8-22282d376f22.vsidx
+/.gitignore
