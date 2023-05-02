@@ -21,7 +21,7 @@ Public Class MainForm
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
-        SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+        SkinManager.ColorScheme = New ColorScheme(Primary.Blue900, Primary.Blue900, Primary.Blue300, Accent.LightBlue200, TextShade.WHITE)
 
         Develop_Form_Show.BackColor = Color.Transparent
         Develop_Form_Show.FlatAppearance.MouseOverBackColor = Color.Transparent
@@ -82,7 +82,7 @@ Public Class MainForm
 
         Me.Hide()
         Main_Function()
-
+        'MaterialSnackBar.ActiveForm = True
 
 
     End Sub
@@ -360,5 +360,6 @@ Public Class MainForm
             'Key_Input.setFocus()
         End If
     End Sub
+
 
 End Class

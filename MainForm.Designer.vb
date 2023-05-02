@@ -292,7 +292,7 @@ Partial Class MainForm
         Me.Develop_Form_Show.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Develop_Form_Show.Location = New System.Drawing.Point(-1, -1)
         Me.Develop_Form_Show.Name = "Develop_Form_Show"
-        Me.Develop_Form_Show.Size = New System.Drawing.Size(28, 21)
+        Me.Develop_Form_Show.Size = New System.Drawing.Size(12, 11)
         Me.Develop_Form_Show.TabIndex = 23
         Me.Develop_Form_Show.UseVisualStyleBackColor = False
         '
@@ -302,7 +302,7 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(711, 426)
+        Me.ClientSize = New System.Drawing.Size(727, 465)
         Me.Controls.Add(Me.SaveConfig_Botton)
         Me.Controls.Add(Me.Exit_Botton)
         Me.Controls.Add(Me.Refresh_Botton)
@@ -318,7 +318,6 @@ Partial Class MainForm
         Me.Controls.Add(Me.UserName_Input)
         Me.Controls.Add(Me.Ping_Show)
         Me.Font = New System.Drawing.Font("JetBrains Mono", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False

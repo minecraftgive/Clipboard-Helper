@@ -38,3 +38,4 @@ C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.x
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.pdb
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\bin\Debug\MaterialSkin.dll
 C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.MDUI_TEST_FORM.resources
+C:\Users\minecraftgive\source\repos\Clipboard-Helper\obj\Debug\ClipboardHelper.Theme_Config.resources
