@@ -21,4 +21,8 @@ Public Class Developer_Form
     Private Sub MDUI_TEST_FORM_Botton_Click(sender As Object, e As EventArgs) Handles MDUI_TEST_FORM_Botton.Click
         MDUI_TEST_FORM.Show()
     End Sub
+
+    Private Sub Theme_Config_Botton_Click(sender As Object, e As EventArgs) Handles Theme_Config_Botton.Click
+        Theme_Config.Show()
+    End Sub
 End Class
