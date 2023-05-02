@@ -1,6 +1,7 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Developer_Form
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
+    'Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -35,12 +36,15 @@ Partial Class Developer_Form
         Me.Open_With_Notepad = New System.Windows.Forms.Button()
         Me.Show_Me_CB = New System.Windows.Forms.Button()
         Me.MDUI_TEST_FORM_Botton = New MaterialSkin.Controls.MaterialButton()
+        Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
+        Me.Theme_Config_Botton = New MaterialSkin.Controls.MaterialButton()
+        Me.MaterialCard1.SuspendLayout()
         Me.SuspendLayout()
         '
         'key_d
         '
         Me.key_d.AutoSize = True
-        Me.key_d.Location = New System.Drawing.Point(47, 166)
+        Me.key_d.Location = New System.Drawing.Point(16, 93)
         Me.key_d.Name = "key_d"
         Me.key_d.Size = New System.Drawing.Size(23, 12)
         Me.key_d.TabIndex = 31
@@ -48,7 +52,7 @@ Partial Class Developer_Form
         '
         'key_d_l
         '
-        Me.key_d_l.Location = New System.Drawing.Point(86, 159)
+        Me.key_d_l.Location = New System.Drawing.Point(45, 84)
         Me.key_d_l.Name = "key_d_l"
         Me.key_d_l.Size = New System.Drawing.Size(368, 21)
         Me.key_d_l.TabIndex = 30
@@ -56,7 +60,7 @@ Partial Class Developer_Form
         's_url_d
         '
         Me.s_url_d.AutoSize = True
-        Me.s_url_d.Location = New System.Drawing.Point(5, 123)
+        Me.s_url_d.Location = New System.Drawing.Point(4, 66)
         Me.s_url_d.Name = "s_url_d"
         Me.s_url_d.Size = New System.Drawing.Size(35, 12)
         Me.s_url_d.TabIndex = 29
@@ -65,7 +69,7 @@ Partial Class Developer_Form
         'pw_d
         '
         Me.pw_d.AutoSize = True
-        Me.pw_d.Location = New System.Drawing.Point(12, 71)
+        Me.pw_d.Location = New System.Drawing.Point(22, 39)
         Me.pw_d.Name = "pw_d"
         Me.pw_d.Size = New System.Drawing.Size(17, 12)
         Me.pw_d.TabIndex = 28
@@ -74,7 +78,7 @@ Partial Class Developer_Form
         'un_d
         '
         Me.un_d.AutoSize = True
-        Me.un_d.Location = New System.Drawing.Point(12, 23)
+        Me.un_d.Location = New System.Drawing.Point(22, 12)
         Me.un_d.Name = "un_d"
         Me.un_d.Size = New System.Drawing.Size(17, 12)
         Me.un_d.TabIndex = 27
@@ -82,21 +86,21 @@ Partial Class Developer_Form
         '
         'S_url_d_l
         '
-        Me.S_url_d_l.Location = New System.Drawing.Point(86, 116)
+        Me.S_url_d_l.Location = New System.Drawing.Point(45, 57)
         Me.S_url_d_l.Name = "S_url_d_l"
         Me.S_url_d_l.Size = New System.Drawing.Size(368, 21)
         Me.S_url_d_l.TabIndex = 26
         '
         'pw_d_l
         '
-        Me.pw_d_l.Location = New System.Drawing.Point(86, 64)
+        Me.pw_d_l.Location = New System.Drawing.Point(45, 30)
         Me.pw_d_l.Name = "pw_d_l"
         Me.pw_d_l.Size = New System.Drawing.Size(368, 21)
         Me.pw_d_l.TabIndex = 25
         '
         'un_d_l
         '
-        Me.un_d_l.Location = New System.Drawing.Point(86, 20)
+        Me.un_d_l.Location = New System.Drawing.Point(45, 3)
         Me.un_d_l.Name = "un_d_l"
         Me.un_d_l.Size = New System.Drawing.Size(368, 21)
         Me.un_d_l.TabIndex = 24
@@ -104,7 +108,7 @@ Partial Class Developer_Form
         'ConfigPath_Label
         '
         Me.ConfigPath_Label.AutoSize = True
-        Me.ConfigPath_Label.Location = New System.Drawing.Point(116, 205)
+        Me.ConfigPath_Label.Location = New System.Drawing.Point(6, 154)
         Me.ConfigPath_Label.Name = "ConfigPath_Label"
         Me.ConfigPath_Label.Size = New System.Drawing.Size(47, 12)
         Me.ConfigPath_Label.TabIndex = 23
@@ -113,7 +117,7 @@ Partial Class Developer_Form
         'OverWrite_To_Defalut_Config
         '
         Me.OverWrite_To_Defalut_Config.Cursor = System.Windows.Forms.Cursors.No
-        Me.OverWrite_To_Defalut_Config.Location = New System.Drawing.Point(278, 209)
+        Me.OverWrite_To_Defalut_Config.Location = New System.Drawing.Point(229, 169)
         Me.OverWrite_To_Defalut_Config.Name = "OverWrite_To_Defalut_Config"
         Me.OverWrite_To_Defalut_Config.Size = New System.Drawing.Size(107, 43)
         Me.OverWrite_To_Defalut_Config.TabIndex = 32
@@ -122,7 +126,7 @@ Partial Class Developer_Form
         '
         'Open_With_Notepad
         '
-        Me.Open_With_Notepad.Location = New System.Drawing.Point(391, 211)
+        Me.Open_With_Notepad.Location = New System.Drawing.Point(342, 172)
         Me.Open_With_Notepad.Name = "Open_With_Notepad"
         Me.Open_With_Notepad.Size = New System.Drawing.Size(96, 38)
         Me.Open_With_Notepad.TabIndex = 33
@@ -131,7 +135,7 @@ Partial Class Developer_Form
         '
         'Show_Me_CB
         '
-        Me.Show_Me_CB.Location = New System.Drawing.Point(12, 226)
+        Me.Show_Me_CB.Location = New System.Drawing.Point(0, 169)
         Me.Show_Me_CB.Name = "Show_Me_CB"
         Me.Show_Me_CB.Size = New System.Drawing.Size(80, 44)
         Me.Show_Me_CB.TabIndex = 34
@@ -141,11 +145,12 @@ Partial Class Developer_Form
         'MDUI_TEST_FORM_Botton
         '
         Me.MDUI_TEST_FORM_Botton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MDUI_TEST_FORM_Botton.CharacterCasing = MaterialSkin.Controls.MaterialButton.CharacterCasingEnum.Title
         Me.MDUI_TEST_FORM_Botton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
         Me.MDUI_TEST_FORM_Botton.Depth = 0
         Me.MDUI_TEST_FORM_Botton.HighEmphasis = True
         Me.MDUI_TEST_FORM_Botton.Icon = Nothing
-        Me.MDUI_TEST_FORM_Botton.Location = New System.Drawing.Point(99, 245)
+        Me.MDUI_TEST_FORM_Botton.Location = New System.Drawing.Point(87, 177)
         Me.MDUI_TEST_FORM_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.MDUI_TEST_FORM_Botton.MouseState = MaterialSkin.MouseState.HOVER
         Me.MDUI_TEST_FORM_Botton.Name = "MDUI_TEST_FORM_Botton"
@@ -157,26 +162,66 @@ Partial Class Developer_Form
         Me.MDUI_TEST_FORM_Botton.UseAccentColor = False
         Me.MDUI_TEST_FORM_Botton.UseVisualStyleBackColor = True
         '
+        'MaterialCard1
+        '
+        Me.MaterialCard1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialCard1.Controls.Add(Me.key_d)
+        Me.MaterialCard1.Controls.Add(Me.key_d_l)
+        Me.MaterialCard1.Controls.Add(Me.s_url_d)
+        Me.MaterialCard1.Controls.Add(Me.pw_d)
+        Me.MaterialCard1.Controls.Add(Me.un_d)
+        Me.MaterialCard1.Controls.Add(Me.S_url_d_l)
+        Me.MaterialCard1.Controls.Add(Me.pw_d_l)
+        Me.MaterialCard1.Controls.Add(Me.un_d_l)
+        Me.MaterialCard1.Depth = 0
+        Me.MaterialCard1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialCard1.Location = New System.Drawing.Point(0, 24)
+        Me.MaterialCard1.Margin = New System.Windows.Forms.Padding(14)
+        Me.MaterialCard1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialCard1.Name = "MaterialCard1"
+        Me.MaterialCard1.Padding = New System.Windows.Forms.Padding(14)
+        Me.MaterialCard1.Size = New System.Drawing.Size(428, 116)
+        Me.MaterialCard1.TabIndex = 36
+        '
+        'Theme_Config_Botton
+        '
+        Me.Theme_Config_Botton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Theme_Config_Botton.CharacterCasing = MaterialSkin.Controls.MaterialButton.CharacterCasingEnum.Title
+        Me.Theme_Config_Botton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.Theme_Config_Botton.Depth = 0
+        Me.Theme_Config_Botton.HighEmphasis = True
+        Me.Theme_Config_Botton.Icon = Nothing
+        Me.Theme_Config_Botton.Location = New System.Drawing.Point(6, 225)
+        Me.Theme_Config_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Theme_Config_Botton.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Theme_Config_Botton.Name = "Theme_Config_Botton"
+        Me.Theme_Config_Botton.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.Theme_Config_Botton.Size = New System.Drawing.Size(158, 36)
+        Me.Theme_Config_Botton.TabIndex = 37
+        Me.Theme_Config_Botton.Text = "Theme_Config"
+        Me.Theme_Config_Botton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.Theme_Config_Botton.UseAccentColor = False
+        Me.Theme_Config_Botton.UseVisualStyleBackColor = True
+        '
         'Developer_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(510, 296)
+        Me.ClientSize = New System.Drawing.Size(877, 482)
+        Me.Controls.Add(Me.Theme_Config_Botton)
+        Me.Controls.Add(Me.MaterialCard1)
         Me.Controls.Add(Me.MDUI_TEST_FORM_Botton)
         Me.Controls.Add(Me.Show_Me_CB)
         Me.Controls.Add(Me.Open_With_Notepad)
         Me.Controls.Add(Me.OverWrite_To_Defalut_Config)
-        Me.Controls.Add(Me.key_d)
-        Me.Controls.Add(Me.key_d_l)
-        Me.Controls.Add(Me.s_url_d)
-        Me.Controls.Add(Me.pw_d)
-        Me.Controls.Add(Me.un_d)
-        Me.Controls.Add(Me.S_url_d_l)
-        Me.Controls.Add(Me.pw_d_l)
-        Me.Controls.Add(Me.un_d_l)
         Me.Controls.Add(Me.ConfigPath_Label)
+        Me.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None
         Me.Name = "Developer_Form"
+        Me.Padding = New System.Windows.Forms.Padding(3, 24, 3, 3)
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.Text = "For Developer"
+        Me.MaterialCard1.ResumeLayout(False)
+        Me.MaterialCard1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,4 +240,6 @@ Partial Class Developer_Form
     Friend WithEvents Open_With_Notepad As Button
     Friend WithEvents Show_Me_CB As Button
     Friend WithEvents MDUI_TEST_FORM_Botton As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents MaterialCard1 As MaterialSkin.Controls.MaterialCard
+    Friend WithEvents Theme_Config_Botton As MaterialSkin.Controls.MaterialButton
 End Class

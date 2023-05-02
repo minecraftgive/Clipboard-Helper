@@ -111,6 +111,12 @@
     <Compile Include="Developr_Form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Theme_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Theme_Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MDUI_TEST_FORM.Designer.vb">
       <DependentUpon>MDUI_TEST_FORM.vb</DependentUpon>
     </Compile>
@@ -146,6 +152,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Developr_Form.resx">
       <DependentUpon>Developr_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Theme_Config.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDUI_TEST_FORM.resx">
       <DependentUpon>MDUI_TEST_FORM.vb</DependentUpon>
