@@ -38,6 +38,7 @@ Partial Class Developer_Form
         Me.MDUI_TEST_FORM_Botton = New MaterialSkin.Controls.MaterialButton()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.Theme_Config_Botton = New MaterialSkin.Controls.MaterialButton()
+        Me.TimeOut_Slider = New MaterialSkin.Controls.MaterialSlider()
         Me.MaterialCard1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -196,18 +197,36 @@ Partial Class Developer_Form
         Me.Theme_Config_Botton.MouseState = MaterialSkin.MouseState.HOVER
         Me.Theme_Config_Botton.Name = "Theme_Config_Botton"
         Me.Theme_Config_Botton.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.Theme_Config_Botton.Size = New System.Drawing.Size(158, 36)
+        Me.Theme_Config_Botton.Size = New System.Drawing.Size(130, 36)
         Me.Theme_Config_Botton.TabIndex = 37
         Me.Theme_Config_Botton.Text = "Theme_Config"
         Me.Theme_Config_Botton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.Theme_Config_Botton.UseAccentColor = False
         Me.Theme_Config_Botton.UseVisualStyleBackColor = True
         '
+        'TimeOut_Slider
+        '
+        Me.TimeOut_Slider.Depth = 0
+        Me.TimeOut_Slider.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TimeOut_Slider.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.TimeOut_Slider.Location = New System.Drawing.Point(24, 299)
+        Me.TimeOut_Slider.MouseState = MaterialSkin.MouseState.HOVER
+        Me.TimeOut_Slider.Name = "TimeOut_Slider"
+        Me.TimeOut_Slider.RangeMax = 30
+        Me.TimeOut_Slider.RangeMin = 1
+        Me.TimeOut_Slider.Size = New System.Drawing.Size(480, 40)
+        Me.TimeOut_Slider.TabIndex = 38
+        Me.TimeOut_Slider.Text = "TimeOut (second)"
+        Me.TimeOut_Slider.Value = 3
+        Me.TimeOut_Slider.ValueMax = 30
+        '
         'Developer_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(877, 482)
+        Me.Controls.Add(Me.TimeOut_Slider)
         Me.Controls.Add(Me.Theme_Config_Botton)
         Me.Controls.Add(Me.MaterialCard1)
         Me.Controls.Add(Me.MDUI_TEST_FORM_Botton)
@@ -242,4 +261,5 @@ Partial Class Developer_Form
     Friend WithEvents MDUI_TEST_FORM_Botton As MaterialSkin.Controls.MaterialButton
     Friend WithEvents MaterialCard1 As MaterialSkin.Controls.MaterialCard
     Friend WithEvents Theme_Config_Botton As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents TimeOut_Slider As MaterialSkin.Controls.MaterialSlider
 End Class

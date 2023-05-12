@@ -2,7 +2,7 @@
 
 Public Class Developer_Form
     Private Sub Developer_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        TimeOut_Slider.Value = timeout_.Seconds
     End Sub
 
     Private Sub OverWrite_To_Defalut_Config_Click(sender As Object, e As EventArgs) Handles OverWrite_To_Defalut_Config.Click
@@ -25,4 +25,10 @@ Public Class Developer_Form
     Private Sub Theme_Config_Botton_Click(sender As Object, e As EventArgs) Handles Theme_Config_Botton.Click
         Theme_Config.Show()
     End Sub
+
+    Private Sub TimeOut_Slider_onValueChanged(sender As Object, newValue As Integer) Handles TimeOut_Slider.onValueChanged
+        ModuleCBH.timeout_ = TimeSpan.FromSeconds(TimeOut_Slider.Value)
+    End Sub
+
+
 End Class
