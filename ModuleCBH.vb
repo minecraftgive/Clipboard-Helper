@@ -10,19 +10,30 @@ Module ModuleCBH
     Public Settings_AllowEmptyKey As Boolean
     Public Experimental_AutoCreateStorageFile As Boolean
 
+    Public timeout_ As TimeSpan = TimeSpan.FromSeconds(3)
+
     Private WebDAVObject As IWebDavClient
 
     Public Function Init()
 
         'MainForm.Hide()
+
+
+        'With timeout_
+
+        '    Hours = 0
+        '    Minutes = 0
+        '    Seconds = 3
+        'End With
+
         Dim Params As WebDavClientParams = New WebDavClientParams
         With Params
             .Credentials = New NetworkCredential(WebDAV_User, WebDAV_Password)
-
+            .Timeout = timeout_
         End With
 
         WebDAVObject = New WebDavClient(Params)
-
+        '//Params.Timeout = 10
     End Function
 
 

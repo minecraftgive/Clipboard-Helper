@@ -114,6 +114,7 @@
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Theme_Config.vb</DependentUpon>
     </Compile>
+    <None Include="ModuleCBH.vb.backup" />
     <Compile Include="Theme_Config.vb">
       <SubType>Form</SubType>
     </Compile>

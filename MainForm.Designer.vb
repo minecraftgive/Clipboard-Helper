@@ -132,7 +132,7 @@ Partial Class MainForm
         'Ping_Show
         '
         Me.Ping_Show.AutoSize = True
-        Me.Ping_Show.Location = New System.Drawing.Point(119, 216)
+        Me.Ping_Show.Location = New System.Drawing.Point(119, 222)
         Me.Ping_Show.Name = "Ping_Show"
         Me.Ping_Show.Size = New System.Drawing.Size(56, 16)
         Me.Ping_Show.TabIndex = 4
@@ -140,21 +140,21 @@ Partial Class MainForm
         '
         'UserName_Input
         '
-        Me.UserName_Input.Location = New System.Drawing.Point(294, 67)
+        Me.UserName_Input.Location = New System.Drawing.Point(296, 76)
         Me.UserName_Input.Name = "UserName_Input"
         Me.UserName_Input.Size = New System.Drawing.Size(368, 23)
         Me.UserName_Input.TabIndex = 5
         '
         'Password_Input
         '
-        Me.Password_Input.Location = New System.Drawing.Point(294, 111)
+        Me.Password_Input.Location = New System.Drawing.Point(296, 120)
         Me.Password_Input.Name = "Password_Input"
         Me.Password_Input.Size = New System.Drawing.Size(368, 23)
         Me.Password_Input.TabIndex = 6
         '
         'ServerURL_Input
         '
-        Me.ServerURL_Input.Location = New System.Drawing.Point(294, 162)
+        Me.ServerURL_Input.Location = New System.Drawing.Point(296, 171)
         Me.ServerURL_Input.Name = "ServerURL_Input"
         Me.ServerURL_Input.Size = New System.Drawing.Size(368, 23)
         Me.ServerURL_Input.TabIndex = 7
@@ -162,7 +162,7 @@ Partial Class MainForm
         'UserName
         '
         Me.UserName.AutoSize = True
-        Me.UserName.Location = New System.Drawing.Point(220, 70)
+        Me.UserName.Location = New System.Drawing.Point(222, 79)
         Me.UserName.Name = "UserName"
         Me.UserName.Size = New System.Drawing.Size(63, 16)
         Me.UserName.TabIndex = 8
@@ -171,7 +171,7 @@ Partial Class MainForm
         'Password
         '
         Me.Password.AutoSize = True
-        Me.Password.Location = New System.Drawing.Point(220, 118)
+        Me.Password.Location = New System.Drawing.Point(222, 127)
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(63, 16)
         Me.Password.TabIndex = 9
@@ -180,7 +180,7 @@ Partial Class MainForm
         'ServerURL
         '
         Me.ServerURL.AutoSize = True
-        Me.ServerURL.Location = New System.Drawing.Point(213, 170)
+        Me.ServerURL.Location = New System.Drawing.Point(215, 179)
         Me.ServerURL.Name = "ServerURL"
         Me.ServerURL.Size = New System.Drawing.Size(70, 16)
         Me.ServerURL.TabIndex = 10
@@ -189,7 +189,7 @@ Partial Class MainForm
         'Key
         '
         Me.Key.AutoSize = True
-        Me.Key.Location = New System.Drawing.Point(255, 213)
+        Me.Key.Location = New System.Drawing.Point(257, 222)
         Me.Key.Name = "Key"
         Me.Key.Size = New System.Drawing.Size(28, 16)
         Me.Key.TabIndex = 14
@@ -197,7 +197,7 @@ Partial Class MainForm
         '
         'Key_Input
         '
-        Me.Key_Input.Location = New System.Drawing.Point(294, 206)
+        Me.Key_Input.Location = New System.Drawing.Point(296, 215)
         Me.Key_Input.Name = "Key_Input"
         Me.Key_Input.Size = New System.Drawing.Size(368, 23)
         Me.Key_Input.TabIndex = 13
@@ -211,7 +211,7 @@ Partial Class MainForm
         Me.Hide_Botton.Depth = 0
         Me.Hide_Botton.HighEmphasis = True
         Me.Hide_Botton.Icon = Nothing
-        Me.Hide_Botton.Location = New System.Drawing.Point(7, 70)
+        Me.Hide_Botton.Location = New System.Drawing.Point(7, 76)
         Me.Hide_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Hide_Botton.MouseState = MaterialSkin.MouseState.HOVER
         Me.Hide_Botton.Name = "Hide_Botton"
@@ -231,7 +231,7 @@ Partial Class MainForm
         Me.Refresh_Botton.Depth = 0
         Me.Refresh_Botton.HighEmphasis = True
         Me.Refresh_Botton.Icon = Nothing
-        Me.Refresh_Botton.Location = New System.Drawing.Point(108, 70)
+        Me.Refresh_Botton.Location = New System.Drawing.Point(108, 76)
         Me.Refresh_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Refresh_Botton.MouseState = MaterialSkin.MouseState.HOVER
         Me.Refresh_Botton.Name = "Refresh_Botton"
@@ -251,7 +251,7 @@ Partial Class MainForm
         Me.Exit_Botton.Depth = 0
         Me.Exit_Botton.HighEmphasis = True
         Me.Exit_Botton.Icon = Nothing
-        Me.Exit_Botton.Location = New System.Drawing.Point(7, 136)
+        Me.Exit_Botton.Location = New System.Drawing.Point(7, 142)
         Me.Exit_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Exit_Botton.MouseState = MaterialSkin.MouseState.HOVER
         Me.Exit_Botton.Name = "Exit_Botton"
@@ -271,7 +271,7 @@ Partial Class MainForm
         Me.SaveConfig_Botton.Depth = 0
         Me.SaveConfig_Botton.HighEmphasis = True
         Me.SaveConfig_Botton.Icon = Nothing
-        Me.SaveConfig_Botton.Location = New System.Drawing.Point(7, 205)
+        Me.SaveConfig_Botton.Location = New System.Drawing.Point(7, 211)
         Me.SaveConfig_Botton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.SaveConfig_Botton.MouseState = MaterialSkin.MouseState.HOVER
         Me.SaveConfig_Botton.Name = "SaveConfig_Botton"

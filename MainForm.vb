@@ -122,6 +122,8 @@ Public Class MainForm
 
             ModuleCBH.Experimental_AutoCreateStorageFile = IIf(Config.GetKey("Experimental.AutoCreateStorageFile") = "true", True, False)
 
+            ModuleCBH.timeout_ = TimeSpan.FromSeconds(Val(Config.GetKey("Settings.Timeout")))
+            Developer_Form.TimeOut_Slider.Value = Val(Config.GetKey("Settings.Timeout"))
 
             UserName_Input.Text = ModuleCBH.WebDAV_User
             Password_Input.Text = ModuleCBH.WebDAV_Password
@@ -349,8 +351,7 @@ Public Class MainForm
         Developer_Form.key_d_l.Text = DES_Key + ""
     End Sub
 
-
-    Private Sub SaveConfig_Botton_Click(sender As Object, e As EventArgs) Handles SaveConfig_Botton.Click
+    Private Sub Save_Config_Function()
         FileOpen(2, ConfigPath, OpenMode.Output)
         PrintLine(2, "[WebDAV]")
         PrintLine(2, "URL=" + ServerURL_Input.Text)
@@ -359,8 +360,59 @@ Public Class MainForm
         PrintLine(2, "")
         PrintLine(2, "[DES]")
         PrintLine(2, "Key=" + Key_Input.Text)
+        PrintLine(2, "")
+        PrintLine(2, "[Settings]")
+        PrintLine(2, "Timeout=" + CStr(Developer_Form.TimeOut_Slider.Value))
+
         FileClose(2)
         MsgBox("Save Config Success !")
+    End Sub
+
+    Private Sub SaveConfig_Botton_Click(sender As Object, e As EventArgs) Handles SaveConfig_Botton.Click
+        'Dim Sure_ As Boolean = False
+        'MsgBox("Are You Sure?", MsgBoxStyle.OkCancel, Sure_)
+        'Dim IsReachable As Boolean = My.Computer.Network.Ping("10.0.0.123")
+        Try
+            'MsgBox(My.Computer.Network.Ping(ModuleCBH.WebDAV_URL))
+            Dim IsReachable As Boolean = My.Computer.Network.Ping("10.0.0.123")
+            'If My.Computer.Network.Ping(ModuleCBH.WebDAV_URL) = True Then
+            'Save_Config_Function()
+            If IsReachable = False Then
+                If MsgBox("Cannot to your WebDAV Server ! ! !" & vbNewLine & "Are You Sure to save and apply config?", MsgBoxStyle.OkCancel + vbExclamation + vbApplicationModal + vbMsgBoxSetForeground) = MsgBoxResult.Ok Then
+                    Save_Config_Function()
+                Else
+
+                End If
+            Else
+                Save_Config_Function()
+            End If
+            'Catch ex As Exception When My.Computer.Network.Ping("10.0.0.123") = True
+            '    'MsgBox(My.Computer.Network.Ping("10.0.0.123"))
+            '    Save_Config_Function()
+
+            'Catch ex As Exception When My.Computer.Network.Ping("10.0.0.123") = False
+            '    If MsgBox("Cannot to your WebDAV Server ! ! !" & vbNewLine & "Are You Sure to save and apply config?", MsgBoxStyle.OkCancel + vbExclamation + vbApplicationModal + vbMsgBoxSetForeground) = MsgBoxResult.Ok Then
+            '        Save_Config_Function()
+            '    End If
+        Catch ex As Exception
+            If MsgBox("Cannot to your WebDAV Server ! ! !" & vbNewLine & "Are You Sure to save and apply config?", MsgBoxStyle.OkCancel + vbExclamation + vbApplicationModal + vbMsgBoxSetForeground) = MsgBoxResult.Ok Then
+                Save_Config_Function()
+                'Else
+                'MsgBox("no")
+                'MsgBox(Sure_)
+                'MsgBox()
+            End If
+            'MsgBox(ex.Message)
+        End Try
+
+
+        'If MsgBox("Are You Sure?", MsgBoxStyle.OkCancel + vbExclamation + vbApplicationModal + vbMsgBoxSetForeground) = MsgBoxResult.Ok Then
+        '    MsgBox("yes")
+        'Else
+        '    MsgBox("no")
+        '    'MsgBox(Sure_)
+        '    'MsgBox()
+        'End If
     End Sub
 
     Private Sub Delevelop_Form_Show_Click(sender As Object, e As EventArgs) Handles Develop_Form_Show.Click
@@ -368,14 +420,19 @@ Public Class MainForm
 
         If Develop_Click_Count >= 3 Then
             Developer_Form.Show()
+            'Developer_Form.setfocus = True
+            'Key_Input.Focus()
+            Developer_Form.Focus()
         End If
 
     End Sub
 
-    Private Sub TextBox1_Leave(sender As Object, e As EventArgs) Handles Key_Input.Leave
-        If Key_Input.Text.Length Mod 8.0! = 1 Then
+    Private Sub Key_Input_Leave(sender As Object, e As EventArgs) Handles Key_Input.Leave
+        'MsgBox(CStr(Key_Input.Text.Length Mod 8) & "  " & Key_Input.Text.Length)
+        If (Key_Input.Text.Length Mod 8.0 = 0) = False Then
             MsgBox("Key Length must mod 8 must be 0 !")
-            'Key_Input.setFocus()
+            Key_Input.Focus()
+
         End If
     End Sub
 
